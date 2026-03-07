@@ -1,0 +1,260 @@
+/* ===========================
+   探求プレゼンバトル LP — Global Styles v4
+   白ベース × ポップなビビッドカラー / 大会ロゴ準拠
+   =========================== */
+
+:root {
+  /* Brand — 大会ロゴ準拠カラー */
+  --c-lime: #c5e84c;        /* ロゴ背景バースト */
+  --c-blue: #4a90d9;        /* 「探究」レタリング */
+  --c-orange: #f5a623;      /* 「プレゼン」レタリング */
+  --c-amber: #fcb900;
+  --c-red: #d0483e;         /* 「バトル」レタリング */
+  --c-green: #4caf50;       /* 「2025」 */
+  --c-cyan: #0693e3;
+  --c-pink: #f78da7;
+
+  /* アクセント（セクションヘディング等） */
+  --c-accent: #f5a623;
+  --c-accent-dark: #e09000;
+
+  /* NORDT */
+  --nordt-n: #4a90d9;
+  --nordt-o: #4caf50;
+  --nordt-r: #f5a623;
+  --nordt-d: #d0483e;
+  --nordt-t: #9b51e0;
+
+  /* Neutrals — 白ベース */
+  --c-bg: #FFFFFF;
+  --c-bg-alt: #FFF9F0;
+  --c-bg-tinted: #FFFDF7;
+  --c-text: #1A1A2E;
+  --c-text-mid: #444455;
+  --c-text-light: #555566;
+  --c-text-muted: #999aaa;
+  --c-white: #FFFFFF;
+  --c-border: #e8e4dc;
+
+  /* Typography */
+  --f-body: 'Noto Sans JP', sans-serif;
+  --f-heading: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  --f-pop: 'M PLUS Rounded 1c', sans-serif;
+
+  /* Layout */
+  --container: min(1100px, 92vw);
+  --section-py: clamp(5rem, 10vw, 8rem);
+
+  /* Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.09);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.13);
+  --shadow-cta: 0 8px 28px rgba(245, 166, 35, 0.35);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px
+}
+
+body {
+  font-family: var(--f-body);
+  color: var(--c-text);
+  background: var(--c-bg);
+  line-height: 1.85;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block
+}
+
+a {
+  color: var(--c-blue);
+  text-decoration: none;
+  transition: color .2s
+}
+
+a:hover {
+  color: var(--c-accent-dark)
+}
+
+/* ── Container ── */
+.container {
+  width: var(--container);
+  margin-inline: auto
+}
+
+/* ── Section ── */
+.sec {
+  padding: var(--section-py) 0;
+  position: relative;
+  overflow: hidden
+}
+
+/* ── Section heading ── */
+.sec-heading {
+  font-family: var(--f-heading);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  line-height: 1.35;
+}
+
+.sec-heading .pop {
+  color: var(--c-accent)
+}
+
+.sec-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--c-orange), var(--c-red));
+  border-radius: 3px;
+  margin: 1rem auto 0;
+}
+
+/* ── CTA button ── */
+.cta-wrap {
+  text-align: center;
+  padding: 3rem 1rem
+}
+
+.cta-sub {
+  font-size: .95rem;
+  color: var(--c-text-mid);
+  margin-bottom: 1.4rem;
+  max-width: 520px;
+  margin-inline: auto
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: linear-gradient(135deg, var(--c-orange), var(--c-red));
+  color: #fff;
+  font-family: var(--f-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  font-weight: 900;
+  padding: 1.15rem 3.2rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-cta);
+  transition: transform .25s cubic-bezier(.22, 1, .36, 1), box-shadow .25s;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: .05em;
+}
+
+.cta-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .22), transparent);
+  transition: left .55s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(245, 166, 35, .45);
+  color: #fff;
+  opacity: 1
+}
+
+.cta-btn:hover::after {
+  left: 100%
+}
+
+.cta-btn:active {
+  transform: translateY(0) scale(.98)
+}
+
+.cta-btn--lg {
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  padding: 1.35rem 4rem
+}
+
+.cta-note {
+  font-size: .82rem;
+  color: var(--c-text-muted);
+  margin-top: 1rem;
+  max-width: 520px;
+  margin-inline: auto;
+  line-height: 1.6
+}
+
+/* ── Scroll reveal ── */
+.rv {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .75s cubic-bezier(.22, 1, .36, 1), transform .75s cubic-bezier(.22, 1, .36, 1)
+}
+
+.rv.visible {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.rv-d1 {
+  transition-delay: .1s
+}
+
+.rv-d2 {
+  transition-delay: .2s
+}
+
+.rv-d3 {
+  transition-delay: .3s
+}
+
+/* ── Stripe divider ── */
+.stripe {
+  height: 6px;
+  background: repeating-linear-gradient(90deg, var(--c-lime) 0 20%, var(--c-blue) 20% 40%, var(--c-orange) 40% 60%, var(--c-red) 60% 80%, var(--c-green) 80% 100%);
+}
+
+/* ── Angled section connector ── */
+.angle-top {
+  clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%)
+}
+
+.angle-top-rev {
+  clip-path: polygon(0 0, 100% 40px, 100% 100%, 0 100%)
+}
+
+@media(max-width:768px) {
+  .sec {
+    padding: clamp(3rem, 8vw, 5rem) 0
+  }
+
+  .angle-top {
+    clip-path: polygon(0 20px, 100% 0, 100% 100%, 0 100%)
+  }
+
+  .angle-top-rev {
+    clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 100%)
+  }
+}
