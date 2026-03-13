@@ -3,28 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="探求プレゼンバトル 2026 — 「どうあるべきか」を見抜き、「どうありたいか」を語れ。">
+<Layout title="探究プレゼンバトル 2026 — あなたの街の１０年後！―地域活性化を提案せよ―">
 
 <!-- ============================================================
-  S1  ファーストビュー — 白ベース×ポップ / 大会ロゴ準拠
+  S1  ファーストビュー — リッチ×ポップ / 大会ロゴ準拠
   ============================================================ -->
 <section class="hero">
+  <!-- 背景エフェクト -->
   <div class="hero-bg" aria-hidden="true">
-    <div class="hero-burst"></div>
     <div class="hero-rays"></div>
-  </div>
-
-  <!-- マンガ装飾 -->
-  <div class="hero-fx" aria-hidden="true">
-    <span class="fx fx-star" style="--x:5%;--y:12%;--s:2.2rem;--c:var(--c-orange);--d:.3s">★</span>
-    <span class="fx fx-star" style="--x:90%;--y:8%;--s:1.8rem;--c:var(--c-blue);--d:.5s">★</span>
-    <span class="fx fx-star" style="--x:48%;--y:5%;--s:1.4rem;--c:var(--c-red);--d:.4s">★</span>
-    <span class="fx fx-bolt" style="--x:8%;--y:68%;--s:2.8rem;--c:var(--c-orange);--d:.7s">⚡</span>
-    <span class="fx fx-bolt" style="--x:93%;--y:62%;--s:2.2rem;--c:var(--c-red);--d:.9s">⚡</span>
-    <span class="fx fx-bang" style="--x:84%;--y:28%;--s:3rem;--c:var(--c-red);--d:1.1s">!</span>
-    <span class="fx fx-bang" style="--x:12%;--y:38%;--s:1.8rem;--c:var(--c-blue);--d:1.3s">!?</span>
-    <span class="fx fx-star" style="--x:96%;--y:80%;--s:1.5rem;--c:var(--c-green);--d:1.5s">★</span>
-    <span class="fx fx-star" style="--x:3%;--y:85%;--s:1.2rem;--c:var(--c-orange);--d:1.6s">★</span>
+    <div class="hero-bubble hero-bubble--1"></div>
+    <div class="hero-bubble hero-bubble--2"></div>
+    <div class="hero-bubble hero-bubble--3"></div>
+    <div class="hero-bubble hero-bubble--4"></div>
+    <div class="hero-bubble hero-bubble--5"></div>
+    <div class="hero-confetti hero-confetti--1"></div>
+    <div class="hero-confetti hero-confetti--2"></div>
+    <div class="hero-confetti hero-confetti--3"></div>
+    <div class="hero-confetti hero-confetti--4"></div>
+    <div class="hero-confetti hero-confetti--5"></div>
+    <div class="hero-confetti hero-confetti--6"></div>
   </div>
 
   <div class="hero-inner">
@@ -36,30 +34,50 @@ import '../styles/global.css';
       <span class="cohost-label">共同開催</span>
     </div>
 
-    <!-- 大会ロゴ -->
-    <img src={`${import.meta.env.BASE_URL}images/hero-logo.png`} alt="探求プレゼンバトル" class="hero-logo" />
+    <!-- 日付 -->
+    <div class="hero-topbar">
+      <span class="hero-date">2026.10.4 <small>SUN</small></span>
+    </div>
 
-    <!-- キャッチ -->
-    <h1 class="hero-catch">
-      <span class="hero-catch__line">「どうあるべきか」を見抜き、</span>
-      <span class="hero-catch__line hero-catch__line--accent">「どうありたいか」を語れ。</span>
+    <!-- 大会ロゴ -->
+    <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="hero-logo" />
+
+    <!-- プレゼンテーマ -->
+    <h1 class="hero-theme">
+      あなたの街の１０年後！<br>―地域活性化を提案せよ―
     </h1>
 
-    <p class="hero-subcatch">ターゲットは社会。武器はキミの「こだわり」。<br>社会の正解をなぞるな。キミだけの「正解」を創り出せ。</p>
-
-    <p class="hero-info">
-      <span class="hero-info__label">小学生〜高校生のプレゼン大会</span>
-      <span class="hero-info__date">2026.10.4 <small>SAT</small></span>
-    </p>
-
-    <div class="hero-tags">
-      <span class="htag htag--green">🆓 参加無料</span>
-      <span class="htag htag--blue">💻 オンライン開催</span>
-      <span class="htag htag--orange">💬 全員にフィードバック</span>
+    <!-- 帯タグ -->
+    <div class="hero-badges-wrap">
+      <div class="hero-badges-row">
+        <span class="htag htag--purple" style="animation-delay:.5s">🎓 小学生〜高校生</span>
+        <span class="htag htag--green" style="animation-delay:.65s">🆓 参加無料</span>
+      </div>
+      <div class="hero-badges-row">
+        <span class="htag htag--blue" style="animation-delay:.8s">💻 オンライン開催</span>
+        <span class="htag htag--orange" style="animation-delay:.95s">💬 全員にフィードバック</span>
+      </div>
     </div>
+
   </div>
 
+  <!-- オルカ船長 -->
   <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="オルカ船長" class="hero-orca" />
+
+  <!-- スクロール誘導 -->
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-arrow"></span>
+  </div>
+</section>
+
+<!-- ============================================================
+  S1.5  CTA（独立セクション）
+  ============================================================ -->
+<section class="sec cta-sec">
+  <div class="container" style="text-align:center">
+    <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
+    <p class="cta-note">※ 参加無料・全員にフィードバックをお届けします</p>
+  </div>
 </section>
 
 <div class="stripe"></div>
@@ -93,6 +111,19 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
+  S2.5  プレゼンテーマ（独立セクション）
+  ============================================================ -->
+<section class="sec theme-sec" id="theme">
+  <div class="container">
+    <div class="theme-box rv">
+      <span class="theme-label">🎯 今回のプレゼンテーマ</span>
+      <p class="theme-title">あなたの街の１０年後！<br>―地域活性化を提案せよ―</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
   S3  大会の仕組み + NORDT
   ============================================================ -->
 <section class="sec sec--tinted angle-top" id="overview">
@@ -101,8 +132,7 @@ import '../styles/global.css';
 
     <div class="info-table rv">
       <dl>
-        <div class="info-row"><dt>🎯 テーマ</dt><dd>主催者が設定（大会の約1ヶ月前に発表）</dd></div>
-        <div class="info-row"><dt>⏱ 時間</dt><dd>5〜10分のプレゼン</dd></div>
+        <div class="info-row"><dt>⏱ 時間</dt><dd>3分のプレゼン</dd></div>
         <div class="info-row"><dt>💻 開催形式</dt><dd><strong>オンライン開催</strong></dd></div>
         <div class="info-row"><dt>👥 審査員</dt><dd>教育者・ビジネスパーソンなどの大人が<strong>本気で聞く</strong></dd></div>
         <div class="info-row"><dt>🎓 対象</dt><dd>小学生〜高校生</dd></div>
@@ -136,54 +166,196 @@ import '../styles/global.css';
 </section>
 
 
+<!-- キャラクター帯 -->
+<div class="char-band" aria-hidden="true">
+  <img src={`${import.meta.env.BASE_URL}images/char1.png`} alt="" class="char-band-img" />
+  <img src={`${import.meta.env.BASE_URL}images/char2.png`} alt="" class="char-band-img" />
+  <img src={`${import.meta.env.BASE_URL}images/char3.png`} alt="" class="char-band-img" />
+  <img src={`${import.meta.env.BASE_URL}images/char4.png`} alt="" class="char-band-img" />
+</div>
+
 <!-- ============================================================
   S4  プレゼンタイプ診断
   ============================================================ -->
 <section class="sec sec--white" id="diagnosis">
   <div class="container">
     <h2 class="sec-heading rv">キミは<span class="pop">どのタイプ？</span></h2>
-    <div class="diag rv">
-      <div class="diag-visual">
-        <div class="diag-types">
-          <div class="diag-type" style="--tc:var(--c-blue)">
-            <span class="diag-type-ico">🧠</span>
-            <span class="diag-type-name">論理で納得させる</span>
-          </div>
-          <div class="diag-type" style="--tc:var(--c-orange)">
-            <span class="diag-type-ico">📖</span>
-            <span class="diag-type-name">ストーリーで揺さぶる</span>
-          </div>
-          <div class="diag-type" style="--tc:var(--c-red)">
-            <span class="diag-type-ico">📊</span>
-            <span class="diag-type-name">データで圧倒する</span>
-          </div>
-          <div class="diag-type" style="--tc:var(--c-green)">
-            <span class="diag-type-ico">❓</span>
-            <span class="diag-type-name">問いかけで考えさせる</span>
+
+    <!-- リード -->
+    <div class="diag-intro rv">
+      <p class="diag-lead">人の心を動かす方法は、ひとつじゃない。</p>
+      <p class="diag-big">プレゼンタイプ診断</p>
+      <p class="diag-desc">論理で納得させるのが得意な人。ストーリーで感情を揺さぶる人。データで圧倒する人。問いかけで考えさせる人。——プレゼンの「正解」は、人の数だけある。<br>参加者全員にNORDT（5つの軸）をもとにした<strong>プレゼンタイプ診断</strong>をお届けします。</p>
+    </div>
+
+    <!-- キャラクター画像 -->
+    <div class="diag-chars rv">
+      <img src={`${import.meta.env.BASE_URL}images/characters.webp`} alt="プレゼンタイプ診断キャラクター" class="diag-chars-img" />
+    </div>
+
+    <!-- タイプカード一覧 -->
+    <div class="type-showcase">
+
+      <!-- バランサー（独立カード） -->
+      <div class="type-section">
+        <h3 class="type-section-title rv">⚖️ バランサータイプ</h3>
+        <div class="type-solo rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-t))">
+          <img src={`${import.meta.env.BASE_URL}images/type-balancer.png`} alt="" class="type-solo-char" aria-hidden="true" />
+          <div class="type-solo-content">
+            <span class="type-code">NORDT均等</span>
+            <p class="type-catch">みんなの力を引き出す調和の達人</p>
+            <p class="type-jobs">保育士・ホテルスタッフ・通訳</p>
           </div>
         </div>
-        <p class="diag-visual-note">※ 実際の診断結果はキャラクターで届きます</p>
       </div>
-      <div class="diag-body">
-        <p class="diag-lead">人の心を動かす方法は、ひとつじゃない。</p>
-        <p class="diag-big">プレゼンタイプ診断</p>
-        <p>論理で納得させるのが得意な人。ストーリーで感情を揺さぶる人。データで圧倒する人。問いかけで考えさせる人。——プレゼンの「正解」は、人の数だけある。</p>
-        <p>探求プレゼンバトルでは、参加者全員にNORDT（5つの軸）をもとにした<strong>プレゼンタイプ診断</strong>をお届けします。小川探究オリジナルのキャラクターがキミの伝え方の特徴を教えてくれるから、「自分はこうやって伝えるのが得意なんだ」がハッキリ分かる。</p>
-        <ul class="diag-list">
-          <li>キミの伝え方の「タイプ」と「強み」</li>
-          <li>5つの軸それぞれの傾向</li>
-          <li>もっと伸ばせるポイント</li>
-        </ul>
-        <p class="diag-note">参加するだけで届く。勝っても負けても、全員がもらえる「キミだけの診断シート」です。</p>
+
+      <!-- ストーリーテラー（横並び） -->
+      <div class="type-section">
+        <h3 class="type-section-title rv">🎭 ストーリーテラータイプ</h3>
+        <div class="type-pair">
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-o),var(--nordt-t))">
+            <img src={`${import.meta.env.BASE_URL}images/type-storyteller-ot.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-t)">T</b></span>
+              <p class="type-catch">笑顔と共感で人を巻き込む語り手</p>
+              <p class="type-jobs">テーマパークキャスト・美容師・ガイド</p>
+            </div>
+          </div>
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-d),var(--nordt-t))">
+            <img src={`${import.meta.env.BASE_URL}images/type-storyteller-dt.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b></span>
+              <p class="type-catch">言葉を操り、会話をリードする表現者</p>
+              <p class="type-jobs">コピーライター・司会・作詞家</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- ディベーター（横並び） -->
+      <div class="type-section">
+        <h3 class="type-section-title rv">⚔️ ディベータータイプ</h3>
+        <div class="type-pair">
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-t))">
+            <img src={`${import.meta.env.BASE_URL}images/type-debater-nt.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-t)">T</b></span>
+              <p class="type-catch">正義の心で人を納得させる論客</p>
+              <p class="type-jobs">教師・新聞記者・アナウンサー</p>
+            </div>
+          </div>
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-r),var(--nordt-t))">
+            <img src={`${import.meta.env.BASE_URL}images/type-debater-rt.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-t)">T</b></span>
+              <p class="type-catch">先頭に立って動く頼もしいリーダー</p>
+              <p class="type-jobs">弁護士・政治家・カウンセラー</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- アナライザー（横並び） -->
+      <div class="type-section">
+        <h3 class="type-section-title rv">🎯 アナライザータイプ</h3>
+        <div class="type-pair">
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-r))">
+            <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nr.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-r)">R</b></span>
+              <p class="type-catch">すばやく正確に判断できる即断の人</p>
+              <p class="type-jobs">パイロット・外科医・消防士</p>
+            </div>
+          </div>
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-d))">
+            <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nd.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-d)">D</b></span>
+              <p class="type-catch">冷静な分析力で本質を見抜く知性派</p>
+              <p class="type-jobs">プログラマー・薬剤師・気象予報士</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- クリエイター（横並び） -->
+      <div class="type-section">
+        <h3 class="type-section-title rv">🎨 クリエイタータイプ</h3>
+        <div class="type-pair">
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-o),var(--nordt-d))">
+            <img src={`${import.meta.env.BASE_URL}images/type-creator-od.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-d)">D</b></span>
+              <p class="type-catch">豊かな感性で世界を彩る芸術家</p>
+              <p class="type-jobs">作曲家・小説家・YouTuber</p>
+            </div>
+          </div>
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-r),var(--nordt-d))">
+            <img src={`${import.meta.env.BASE_URL}images/type-creator-rd.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b></span>
+              <p class="type-catch">緻密な計画で作品を届ける職人</p>
+              <p class="type-jobs">建築士・声優・イラストレーター</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- パイオニア（横並び） -->
+      <div class="type-section">
+        <h3 class="type-section-title rv">🚀 パイオニアタイプ</h3>
+        <div class="type-pair">
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-o))">
+            <img src={`${import.meta.env.BASE_URL}images/type-pioneer-no.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b></span>
+              <p class="type-catch">得意を活かして新しい価値を生む発明家</p>
+              <p class="type-jobs">アプリ開発・ゲームクリエイター・企画職</p>
+            </div>
+          </div>
+          <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-o),var(--nordt-r))">
+            <img src={`${import.meta.env.BASE_URL}images/type-pioneer-or.png`} alt="" class="type-card-char" aria-hidden="true" />
+            <div class="type-card-info">
+              <span class="type-code"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b></span>
+              <p class="type-catch">誰にも真似できないひらめきの天才</p>
+              <p class="type-jobs">科学者・発明家・起業家</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ラスボス（シークレット） -->
+      <div class="type-section">
+        <h3 class="type-section-title rv">👑 ラスボスタイプ</h3>
+        <div class="secret-card rv">
+          <div class="secret-silhouette">
+            <img src={`${import.meta.env.BASE_URL}images/type-lastboss.png`} alt="" class="secret-char" aria-hidden="true" />
+            <div class="secret-overlay"></div>
+          </div>
+          <div class="secret-info">
+            <span class="secret-badge">👑 ULTRA RARE</span>
+            <p class="secret-title">？？？タイプ</p>
+            <p class="secret-desc">全能力が最高値に達した者だけが覚醒する<br>伝説のプレゼンタイプ。<br>その正体は——診断結果で明かされる。</p>
+            <p class="secret-cta">▶ キミはこのタイプかもしれない</p>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <p class="diag-bottom-note rv">参加するだけで届く。勝っても負けても、全員がもらえる「キミだけの診断シート」です。</p>
   </div>
 </section>
 
 <!-- CTA① -->
 <div class="cta-wrap cta-wrap--pop rv">
-  <p class="cta-sub"><strong>キミのプレゼンタイプ、知りたくない？</strong></p>
-  <a href="#" class="cta-btn">1分で完了！無料でエントリーする</a>
+  <div class="cta-with-orca">
+    <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="" class="cta-orca" aria-hidden="true" />
+    <div>
+      <p class="cta-sub"><strong>キミのプレゼンタイプ、知りたくない？</strong></p>
+      <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
+    </div>
+  </div>
 </div>
 
 <div class="stripe"></div>
@@ -196,11 +368,11 @@ import '../styles/global.css';
   <div class="container">
     <h2 class="sec-heading rv">参加するには？</h2>
     <ol class="steps">
-      <li class="step rv" style="--sc:var(--c-blue)"><span class="step-n">1</span><div><strong>このページから申し込む</strong><p>フォームに必要事項を入力して送信するだけ。</p></div></li>
-      <li class="step rv" style="--sc:var(--c-orange)"><span class="step-n">2</span><div><strong>大会の約1ヶ月前にテーマが届く</strong><p>届いてから準備を始めれば大丈夫です。</p></div></li>
-      <li class="step rv" style="--sc:var(--c-green)"><span class="step-n">3</span><div><strong>分析やアイデアをスライドにまとめて準備</strong><p>テーマに対する自分の考えをまとめ、プレゼン資料を作ります。</p></div></li>
-      <li class="step rv" style="--sc:var(--c-red)"><span class="step-n">4</span><div><strong>当日、オンラインでプレゼン！</strong><p>審査員の大人たちの前で、自分の考えを本気で伝えます。</p></div></li>
-      <li class="step rv" style="--sc:var(--nordt-t)"><span class="step-n">5</span><div><strong>プレゼンタイプ診断が届く</strong><p>後日、診断結果とフィードバックをお届けします。</p></div></li>
+      <li class="step rv" style="--sc:var(--nordt-n)"><span class="step-n">1</span><div><strong>このページから申し込む</strong><p>フォームに必要事項を入力して送信するだけ。</p></div></li>
+      <li class="step rv" style="--sc:var(--nordt-o)"><span class="step-n">2</span><div><strong>テーマを確認する</strong><p>「あなたの街の１０年後！―地域活性化を提案せよ―」</p></div></li>
+      <li class="step rv" style="--sc:var(--nordt-r)"><span class="step-n">3</span><div><strong>分析やアイデアをプレゼンスライドにまとめて準備する</strong></div></li>
+      <li class="step rv" style="--sc:var(--nordt-d)"><span class="step-n">4</span><div><strong>当日、オンラインでプレゼンする</strong></div></li>
+      <li class="step rv" style="--sc:var(--nordt-t)"><span class="step-n">5</span><div><strong>後日、プレゼンタイプ診断が届く</strong></div></li>
     </ol>
   </div>
 </section>
@@ -228,8 +400,7 @@ import '../styles/global.css';
 
 <!-- CTA② -->
 <div class="cta-wrap rv">
-  <p class="cta-sub">参加無料。全員にフィードバックとプレゼンタイプ診断をお届けします。</p>
-  <a href="#" class="cta-btn">1分で完了！無料でエントリーする</a>
+  <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
   <p class="cta-note">※ オンライン開催。ご自宅から参加できます。</p>
 </div>
 
@@ -243,7 +414,7 @@ import '../styles/global.css';
     <div class="org-main rv">
       <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="小川探究" class="org-main-logo" />
       <p class="org-mission">「プレゼンをもっと日常へ。」 — 小川探究</p>
-      <p>探求プレゼンバトルは、<strong>小川探究</strong>が主催するプレゼン大会です。「探究で日本を元気に」をミッションに掲げ、教育×エンタメのパイオニアとして、出張授業・プレゼン大会・教材開発を手がけています。</p>
+      <p>探究プレゼンバトルは、<strong>小川探究</strong>が主催するプレゼン大会です。「探究で日本を元気に」をミッションに掲げ、教育×エンタメのパイオニアとして、出張授業・プレゼン大会・教材開発を手がけています。</p>
       <p>代表の小川大輔は、12年間の塾講師経験を経て2024年に創業。子どもたちが「自分の考えを持ち、自分の言葉で伝える」力を育てることを、事業の核心に置いています。</p>
       <div class="org-achievements">
         <h4>実績</h4>
@@ -284,7 +455,7 @@ import '../styles/global.css';
     <div class="faq-list">
       <details class="faq rv"><summary>参加費はいくらですか？</summary><p>無料です。参加にかかる費用は一切ありません。</p></details>
       <details class="faq rv"><summary>プレゼンの経験がなくても大丈夫ですか？</summary><p>大丈夫です。NORDT（5つの軸）で「考え」も「伝え方」も総合的に評価します。初めてでも安心して挑戦できます。</p></details>
-      <details class="faq rv"><summary>テーマはいつ発表されますか？</summary><p>大会の約1ヶ月前に発表します。届いてから準備を始めれば大丈夫です。</p></details>
+      <details class="faq rv"><summary>テーマは何ですか？</summary><p>「あなたの街の１０年後！―地域活性化を提案せよ―」です。このテーマに沿って準備を進めましょう。</p></details>
       <details class="faq rv"><summary>小学生の低学年でも参加できますか？</summary><p>小学生〜高校生が対象です。学年ではなく「課題を解決したい」という気持ちがあれば、どなたでも参加できます。</p></details>
       <details class="faq rv"><summary>当日は保護者の同席が必要ですか？</summary><p>オンライン開催のため、ご自宅から参加できます。保護者の方の同席は自由ですが、必須ではありません。</p></details>
       <details class="faq rv"><summary>プレゼンタイプ診断はいつ届きますか？</summary><p>大会終了後1週間以内に、全員にお届けします。</p></details>
@@ -304,18 +475,10 @@ import '../styles/global.css';
   </div>
   <div class="container">
     <div class="final-body rv">
-      <img src={`${import.meta.env.BASE_URL}images/hero-logo.png`} alt="探求プレゼンバトル" class="final-logo" />
-      <h2 class="final-catch">「どうあるべきか」を見抜き、<br>「どうありたいか」を語れ。</h2>
-      <p class="cta-sub">小学生〜高校生向けのプレゼン大会です。参加無料。全員にフィードバックがあります。</p>
-      <a href="#" class="cta-btn cta-btn--lg">1分で完了！無料でエントリーする</a>
+      <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="final-logo" />
+      <h2 class="final-catch">あなたの街の１０年後！<br>―地域活性化を提案せよ―</h2>
+      <a href="#" class="cta-btn cta-btn--lg">1分で完了！<br>無料でエントリーする</a>
       <p class="cta-note">※ 全員にフィードバックとプレゼンタイプ診断をお届けします。参加無料。</p>
-
-      <div class="final-cohost">
-        <span>共同開催</span>
-        <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="小川探究" />
-        <span class="final-cohost-x">&times;</span>
-        <img src={`${import.meta.env.BASE_URL}images/valed-logo.png`} alt="バレッドキッズ" />
-      </div>
     </div>
   </div>
 </section>
@@ -340,112 +503,222 @@ import '../styles/global.css';
      STYLES — 白ベース×ポップなビビッドカラー
      ============================================================ -->
 <style>
-/* ─────────── S1 HERO — 白ベース×ポップ ─────────── */
+/* ─────────── S1 HERO — リッチ×ポップ ─────────── */
 .hero{
   position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;
   text-align:center;overflow:hidden;
-  background:#fff;
+  background:linear-gradient(175deg,#FFFEF8 0%,#FFF9F0 40%,#F0F7FF 100%);
   color:var(--c-text);
 }
 
+/* ─── 背景レイヤー ─── */
 .hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 
-/* 黄緑バースト（ロゴの背景ギザギザを模倣） */
-.hero-burst{
-  position:absolute;
-  top:50%;left:50%;
-  width:130vmax;height:130vmax;
-  transform:translate(-50%,-50%);
-  background:radial-gradient(circle,var(--c-lime) 0%,rgba(197,232,76,.3) 35%,transparent 55%);
-  opacity:.4;
-}
-
+/* 放射状レイ */
 .hero-rays{
-  position:absolute;inset:-50%;
-  background:repeating-conic-gradient(rgba(197,232,76,.06) 0deg 3deg,transparent 3deg 10deg);
-  animation:spin 90s linear infinite;
+  position:absolute;top:50%;left:50%;width:140vmax;height:140vmax;
+  transform:translate(-50%,-50%);
+  background:conic-gradient(
+    from 0deg,
+    transparent 0deg,rgba(255,215,0,.06) 10deg,transparent 20deg,
+    transparent 30deg,rgba(74,144,217,.05) 40deg,transparent 50deg,
+    transparent 60deg,rgba(76,175,80,.05) 70deg,transparent 80deg,
+    transparent 90deg,rgba(245,166,35,.06) 100deg,transparent 110deg,
+    transparent 120deg,rgba(208,72,62,.05) 130deg,transparent 140deg,
+    transparent 150deg,rgba(155,81,224,.05) 160deg,transparent 170deg,
+    transparent 180deg,rgba(255,215,0,.06) 190deg,transparent 200deg,
+    transparent 210deg,rgba(74,144,217,.05) 220deg,transparent 230deg,
+    transparent 240deg,rgba(76,175,80,.05) 250deg,transparent 260deg,
+    transparent 270deg,rgba(245,166,35,.06) 280deg,transparent 290deg,
+    transparent 300deg,rgba(208,72,62,.05) 310deg,transparent 320deg,
+    transparent 330deg,rgba(155,81,224,.05) 340deg,transparent 350deg
+  );
+  animation:raysSpin 60s linear infinite;
+  opacity:.8;
 }
-@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes raysSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 
-.hero-fx{position:absolute;inset:0;pointer-events:none;z-index:2}
-.fx{position:absolute;left:var(--x);top:var(--y);font-size:var(--s);color:var(--c);
-  opacity:0;animation:pop .55s cubic-bezier(.34,1.56,.64,1) var(--d) forwards}
-.fx-bang{font-family:var(--f-heading);font-weight:900}
-@keyframes pop{
-  0%{opacity:0;transform:scale(0) rotate(-25deg)}
-  65%{opacity:1;transform:scale(1.35) rotate(6deg)}
-  100%{opacity:.65;transform:scale(1) rotate(0)}
+/* 浮遊バブル（NORDT5色） */
+.hero-bubble{
+  position:absolute;border-radius:50%;
+  animation:bubbleFloat 6s ease-in-out infinite;
+  opacity:.35;filter:blur(1px);
+}
+.hero-bubble--1{width:80px;height:80px;top:12%;left:8%;background:var(--nordt-n);animation-duration:7s}
+.hero-bubble--2{width:60px;height:60px;top:18%;right:12%;background:var(--nordt-o);animation-duration:5.5s;animation-delay:1s}
+.hero-bubble--3{width:50px;height:50px;bottom:25%;left:15%;background:var(--nordt-r);animation-duration:6.5s;animation-delay:2s}
+.hero-bubble--4{width:70px;height:70px;bottom:20%;right:8%;background:var(--nordt-d);animation-duration:5s;animation-delay:.5s}
+.hero-bubble--5{width:40px;height:40px;top:40%;left:3%;background:var(--nordt-t);animation-duration:8s;animation-delay:3s}
+@keyframes bubbleFloat{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-20px) scale(1.1)}
 }
 
-.hero-inner{position:relative;z-index:3;padding:2rem 1rem;max-width:780px}
+/* 紙吹雪 */
+.hero-confetti{
+  position:absolute;width:12px;height:12px;border-radius:2px;
+  opacity:.5;
+  animation:confettiFall 8s linear infinite;
+}
+.hero-confetti--1{left:10%;top:-5%;background:var(--nordt-n);animation-delay:0s;transform:rotate(30deg)}
+.hero-confetti--2{left:25%;top:-8%;background:var(--nordt-o);animation-delay:1.5s;width:8px;height:14px;transform:rotate(-20deg)}
+.hero-confetti--3{left:50%;top:-3%;background:var(--nordt-r);animation-delay:3s;width:10px;height:10px;border-radius:50%}
+.hero-confetti--4{left:70%;top:-6%;background:var(--nordt-d);animation-delay:4.5s;transform:rotate(60deg)}
+.hero-confetti--5{left:85%;top:-4%;background:var(--nordt-t);animation-delay:2s;width:14px;height:8px}
+.hero-confetti--6{left:40%;top:-7%;background:var(--c-lime);animation-delay:6s;border-radius:50%;width:10px;height:10px}
+@keyframes confettiFall{
+  0%{transform:translateY(0) rotate(0deg);opacity:.6}
+  100%{transform:translateY(110vh) rotate(720deg);opacity:0}
+}
+
+/* ─── メインコンテンツ ─── */
+.hero-inner{
+  position:relative;z-index:3;
+  padding:0;max-width:100vw;width:100vw;margin:0 auto;
+}
 
 /* 共催ロゴ */
 .hero-cohost{display:flex;align-items:center;justify-content:center;gap:.7rem;margin-bottom:1.5rem;animation:fadeUp .6s .1s both}
 .cohost-logo{height:28px;width:auto;opacity:.7}
 .cohost-x{font-size:1rem;opacity:.4;font-weight:700}
-.cohost-label{font-size:.72rem;font-weight:700;color:var(--c-text-muted);background:var(--c-bg-alt);padding:.2rem .7rem;border-radius:100px;margin-left:.3rem}
+.cohost-label{font-size:.72rem;font-weight:700;color:var(--c-text-muted);background:rgba(255,255,255,.7);padding:.2rem .7rem;border-radius:100px;margin-left:.3rem;backdrop-filter:blur(4px)}
 
 /* 大会ロゴ */
 .hero-logo{
-  max-width:min(480px,80vw);margin:0 auto 1.5rem;
-  filter:drop-shadow(0 4px 16px rgba(0,0,0,.08));
-  animation:logoDrop .7s .15s cubic-bezier(.22,1,.36,1) both;
+  display:block;width:100%;max-width:960px;
+  margin:0 auto .2rem;
+  filter:drop-shadow(0 6px 24px rgba(0,0,0,.1));
+  animation:logoDrop .8s .15s cubic-bezier(.22,1,.36,1) both;
 }
-@keyframes logoDrop{0%{opacity:0;transform:scale(.65) translateY(-40px)}100%{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes logoDrop{0%{opacity:0;transform:scale(.6) translateY(-50px) rotate(-2deg)}100%{opacity:1;transform:scale(1) translateY(0) rotate(0deg)}}
 
-/* キャッチ */
-.hero-catch{margin-bottom:1rem}
-.hero-catch__line{
-  display:block;font-family:var(--f-heading);
-  font-size:clamp(1.5rem,4.5vw,2.8rem);font-weight:900;line-height:1.3;
-  letter-spacing:.03em;
+/* プレゼンテーマ */
+.hero-theme{
+  font-family:var(--f-heading);
+  font-size:clamp(1.4rem,4.2vw,2.6rem);font-weight:900;
+  line-height:1.5;letter-spacing:.04em;text-align:center;
+  max-width:600px;
+  margin:0 auto clamp(1.5rem,4vw,2.5rem);
+  padding:.8rem 1.5rem;
+  background:linear-gradient(135deg,rgba(255,255,255,.85),rgba(255,249,240,.9));
+  border:3px solid var(--c-orange);
+  border-radius:var(--radius-md);
+  box-shadow:0 4px 24px rgba(245,166,35,.15),inset 0 0 20px rgba(255,215,0,.08);
+  position:relative;
   animation:slam .65s .35s cubic-bezier(.22,1,.36,1) both;
 }
-.hero-catch__line--accent{
-  color:var(--c-red);
+.hero-theme::before{
+  content:'🎯 プレゼンテーマ';
+  position:absolute;top:-.7em;left:50%;transform:translateX(-50%);
+  font-size:clamp(.65rem,1.8vw,.85rem);font-weight:700;
+  background:linear-gradient(135deg,var(--c-orange),var(--c-red));color:#fff;
+  padding:.2rem .9rem;border-radius:100px;white-space:nowrap;
+  letter-spacing:.06em;
 }
 @keyframes slam{0%{opacity:0;transform:scale(1.3) translateY(-10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
 
-/* サブキャッチ */
-.hero-subcatch{
-  font-size:clamp(.88rem,2vw,1.05rem);color:var(--c-text-mid);line-height:1.8;
-  margin-bottom:1.5rem;animation:fadeUp .6s .5s both;
+/* 上部帯: 日付 + バッジ */
+.hero-topbar{
+  display:flex;flex-direction:column;align-items:center;gap:.8rem;
+  margin-bottom:1.2rem;animation:fadeUp .5s .2s both;
 }
-
-/* 大会情報 */
-.hero-info{display:flex;align-items:center;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-bottom:1.2rem;animation:fadeUp .6s .6s both}
-.hero-info__label{font-family:var(--f-heading);font-size:clamp(.88rem,2.2vw,1.1rem);font-weight:900}
-.hero-info__date{
-  font-family:var(--f-heading);font-size:clamp(.88rem,2.2vw,1.1rem);font-weight:900;
-  background:var(--c-orange);color:#fff;padding:.3rem 1.2rem;border-radius:8px;
+.hero-date{
+  font-family:var(--f-heading);font-size:clamp(1.8rem,5vw,3rem);font-weight:900;
+  background:linear-gradient(135deg,var(--c-orange),var(--c-red));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:.04em;line-height:1.2;
+  filter:drop-shadow(0 2px 8px rgba(245,166,35,.25));
 }
-.hero-info__date small{font-size:.7em;opacity:.8}
+.hero-date small{font-size:.5em;-webkit-text-fill-color:var(--c-red);opacity:.85;margin-left:.15em}
+.hero-badges-wrap{
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+  margin-bottom:clamp(1rem,3vw,1.5rem);
+  animation:fadeUp .5s .7s both;
+}
+.hero-badges-row{display:flex;gap:.4rem;justify-content:center}
 
-/* タグ */
-.hero-tags{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .6s .7s both}
+/* タグ — ポップイン */
 .htag{
-  font-family:var(--f-pop);font-size:.82rem;font-weight:700;
-  padding:.45rem 1rem;border-radius:100px;
-  background:#fff;
-  border:2px solid var(--c-border);
-  color:var(--c-text-mid);
+  font-family:var(--f-pop);font-size:clamp(.58rem,1.8vw,.78rem);font-weight:700;
+  padding:.25rem .6rem;border-radius:100px;
+  border:2px solid;
+  animation:popIn .5s cubic-bezier(.22,1,.36,1) both;
+  white-space:nowrap;
 }
-.htag--green{border-color:var(--c-green);color:var(--c-green)}
-.htag--blue{border-color:var(--c-blue);color:var(--c-blue)}
-.htag--orange{border-color:var(--c-orange);color:var(--c-orange)}
+.htag--purple{border-color:var(--nordt-n);color:#fff;background:var(--nordt-n)}
+.htag--green{border-color:var(--c-green);color:#fff;background:var(--c-green)}
+.htag--blue{border-color:var(--c-blue);color:#fff;background:var(--c-blue)}
+.htag--orange{border-color:var(--c-orange);color:#fff;background:var(--c-orange)}
+@keyframes popIn{0%{opacity:0;transform:scale(.5) translateY(15px)}100%{opacity:1;transform:scale(1) translateY(0)}}
 
-/* オルカ */
+/* ─── キャラクター集合 ─── */
+.hero-chars{
+  display:flex;justify-content:center;align-items:flex-end;
+  gap:clamp(.3rem,2vw,1.5rem);
+  padding:0 1rem;
+  animation:fadeUp .7s 1.1s both;
+}
+.hero-char{
+  width:clamp(55px,10vw,110px);height:auto;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,.1));
+  animation:charBob 3s ease-in-out infinite;
+}
+.hero-char:nth-child(1){animation-delay:0s}
+.hero-char:nth-child(2){animation-delay:.4s}
+.hero-char:nth-child(3){animation-delay:.8s}
+.hero-char:nth-child(4){animation-delay:1.2s}
+.hero-char:nth-child(5){animation-delay:1.6s}
+.hero-char--center{
+  width:clamp(65px,12vw,130px);
+  filter:drop-shadow(0 6px 20px rgba(0,0,0,.15));
+}
+@keyframes charBob{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* ─── CTA独立セクション ─── */
+.cta-sec{padding:clamp(1.5rem,4vw,2.5rem) 0}
+.cta-sec .cta-note{margin-top:.8rem}
+
+/* ─── オルカ ─── */
 .hero-orca{
-  position:absolute;bottom:20px;right:clamp(10px,4vw,60px);width:clamp(90px,12vw,140px);z-index:4;
+  position:absolute;bottom:60px;right:clamp(10px,4vw,60px);
+  width:clamp(80px,10vw,130px);z-index:4;
   animation:orcaBob 3.5s ease-in-out infinite;
   filter:drop-shadow(0 4px 12px rgba(0,0,0,.12));
 }
 @keyframes orcaBob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
 
+/* ─── スクロール誘導 ─── */
+.hero-scroll{
+  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  z-index:5;animation:fadeUp .6s 1.5s both;
+}
+.hero-scroll-arrow{
+  display:block;width:24px;height:24px;
+  border-right:3px solid var(--c-text-muted);border-bottom:3px solid var(--c-text-muted);
+  transform:rotate(45deg);opacity:.4;
+  animation:scrollBounce 1.5s ease-in-out infinite;
+}
+@keyframes scrollBounce{
+  0%,100%{transform:rotate(45deg) translateY(0);opacity:.4}
+  50%{transform:rotate(45deg) translateY(8px);opacity:.7}
+}
+
 @keyframes fadeUp{0%{opacity:0;transform:translateY(22px)}100%{opacity:1;transform:translateY(0)}}
 
+/* ─── モバイル調整 ─── */
 @media(max-width:600px){
-  .hero-orca{display:none}
+  .hero-orca{width:60px;bottom:50px;right:10px}
+  .hero-bubble{opacity:.2}
+  .hero-bubble--1{width:50px;height:50px}
+  .hero-bubble--2{width:40px;height:40px}
+  .hero-bubble--3{width:35px;height:35px}
+  .hero-bubble--4{width:45px;height:45px}
+  .hero-bubble--5{width:25px;height:25px}
+  .hero-confetti{opacity:.3}
 }
 
 
@@ -471,13 +744,40 @@ import '../styles/global.css';
 .bene p{font-size:.88rem;color:var(--c-text-light);line-height:1.85;text-align:left}
 
 
+/* ─────────── S2.5 THEME ─────────── */
+.theme-sec{padding:clamp(2.5rem,6vw,4rem) 0}
+.theme-box{
+  max-width:700px;margin:0 auto;text-align:center;
+  background:linear-gradient(135deg,#FFF9F0 0%,#FFF3E0 100%);
+  border:3px solid var(--c-orange);
+  border-radius:var(--radius-lg);
+  padding:clamp(2rem,5vw,3rem) clamp(1.5rem,4vw,3rem);
+  position:relative;overflow:hidden;
+  box-shadow:0 8px 32px rgba(245,166,35,.15);
+}
+.theme-box::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--c-orange),var(--c-red),var(--c-orange));
+}
+.theme-label{
+  display:inline-block;font-family:var(--f-heading);font-size:clamp(.85rem,2vw,1rem);
+  font-weight:700;color:var(--c-accent-dark);
+  background:rgba(255,255,255,.7);padding:.3rem 1.2rem;border-radius:100px;
+  margin-bottom:1rem;letter-spacing:.06em;
+}
+.theme-title{
+  font-family:var(--f-heading);font-size:clamp(1.3rem,4vw,2rem);
+  font-weight:900;color:var(--c-text);line-height:1.5;
+  letter-spacing:.04em;
+}
+
 /* ─────────── S3 OVERVIEW + NORDT ─────────── */
 .info-table{max-width:680px;margin:0 auto 3.5rem;border-radius:var(--radius-md);overflow:hidden;border:2px solid var(--c-border);background:#fff;box-shadow:var(--shadow-md)}
 .info-table dl{display:contents}
 .info-row{display:flex;border-bottom:1px solid var(--c-border)}
 .info-row:last-child{border-bottom:none}
 .info-row dt{flex:0 0 130px;padding:1rem 1.2rem;font-weight:700;font-size:.88rem;background:var(--c-bg-alt);display:flex;align-items:center}
-.info-row dd{flex:1;padding:1rem 1.2rem;font-size:.92rem;display:flex;align-items:center}
+.info-row dd{flex:1;padding:1rem 1.2rem;font-size:.92rem}
 .info-free{font-family:var(--f-heading);font-weight:900;color:var(--c-red);font-size:1.2rem}
 
 .nordt{max-width:780px;margin:0 auto}
@@ -505,34 +805,198 @@ import '../styles/global.css';
 
 
 /* ─────────── S4 DIAGNOSIS ─────────── */
-.diag{display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem;align-items:start}
+.diag-intro{text-align:center;margin-bottom:2rem}
+.diag-lead{font-size:1.05rem;font-weight:700;color:var(--c-text-mid);margin-bottom:.4rem}
+.diag-big{font-family:var(--f-heading);font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:var(--c-orange);margin-bottom:.8rem;line-height:1.3}
+.diag-desc{font-size:.92rem;line-height:1.85;color:var(--c-text-light);max-width:620px;margin:0 auto}
 
-.diag-types{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-.diag-type{
-  background:#fff;border:3px solid var(--tc);border-radius:var(--radius-sm);
-  padding:1.4rem .8rem;text-align:center;
+.diag-chars{text-align:center;margin-bottom:2.5rem}
+.diag-chars-img{max-width:min(560px,90vw);margin:0 auto;border-radius:var(--radius-md);filter:drop-shadow(0 8px 24px rgba(0,0,0,.1))}
+
+/* タイプ一覧 */
+.type-showcase{display:flex;flex-direction:column;gap:2rem;margin-bottom:2rem}
+
+/* タイプセクション見出し */
+.type-section-title{
+  font-family:var(--f-heading);font-size:clamp(1.1rem,2.8vw,1.4rem);font-weight:900;
+  text-align:center;margin-bottom:1rem;
+}
+
+/* 横並び2列ペア */
+.type-pair{display:flex;gap:1rem;max-width:600px;margin:0 auto}
+.type-pair .type-card{flex:1;min-width:0}
+
+/* ペア内カード — キャラ + テキスト縦積み（余白詰め） */
+.type-card{
+  border-radius:var(--radius-sm);text-align:center;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;
+  padding:.8rem 1rem 1rem;
   transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
 }
-.diag-type:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:var(--shadow-md)}
-.diag-type-ico{display:block;font-size:2rem;margin-bottom:.4rem}
-.diag-type-name{display:block;font-family:var(--f-heading);font-size:.78rem;font-weight:900;color:var(--tc)}
-.diag-visual-note{font-size:.75rem;color:var(--c-text-muted);text-align:center;margin-top:.6rem}
+.type-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--tc);border-radius:4px 4px 0 0;z-index:3}
+/* キャラ画像 */
+.type-card-char{
+  width:clamp(100px,48%,150px);height:auto;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,.08));
+  margin-bottom:.5rem;
+}
+/* テキスト情報 */
+.type-card-info{text-align:center}
+.type-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.type-code{
+  display:inline-block;font-family:var(--f-heading);font-size:.85rem;font-weight:900;
+  color:var(--c-text-muted);background:rgba(255,249,240,.9);padding:.2rem .8rem;
+  border-radius:100px;margin-bottom:.4rem;letter-spacing:.08em;
+}
+.type-code b{font-size:1.1rem}
+.type-catch{font-size:.82rem;color:var(--c-text);line-height:1.5;margin-bottom:.25rem;font-weight:600}
+.type-jobs{font-size:.72rem;color:var(--c-text-muted);line-height:1.4}
 
-.diag-body{padding:.5rem 0}
-.diag-lead{font-size:1.05rem;font-weight:700;color:var(--c-text-mid);margin-bottom:.4rem}
-.diag-big{font-family:var(--f-heading);font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:var(--c-orange);margin-bottom:1rem;line-height:1.3}
-.diag-body>p{font-size:.92rem;line-height:1.85;margin-bottom:.8rem}
-.diag-list{list-style:none;margin-bottom:1rem}
-.diag-list li{font-size:.9rem;padding:.35rem 0;padding-left:1.4rem;position:relative}
-.diag-list li::before{content:'✓';position:absolute;left:0;color:var(--c-orange);font-weight:900}
-.diag-note{font-size:.88rem;color:var(--c-text-mid);font-weight:700;background:var(--c-bg-alt);padding:.8rem 1rem;border-radius:var(--radius-sm);border-left:4px solid var(--c-orange)}
+/* 独立カード（バランサー / ラスボス）— キャラ左 + テキスト右 */
+.type-solo{
+  border-radius:var(--radius-md);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;
+  min-height:200px;
+  max-width:600px;margin:0 auto;
+  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
+}
+.type-solo::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--tc);border-radius:4px 4px 0 0;z-index:3}
+.type-solo:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.type-solo-char{
+  position:relative;flex-shrink:0;
+  width:clamp(140px,18vw,200px);height:auto;
+  filter:drop-shadow(0 6px 20px rgba(0,0,0,.12));
+  z-index:1;padding:1rem 0 1rem 1.5rem;
+}
+.type-solo-content{
+  position:relative;z-index:2;flex:1;text-align:center;
+  padding:1.5rem 2rem;
+}
+.type-solo-content .type-code{font-size:1rem}
+.type-solo-content .type-catch{font-size:.95rem;font-weight:700;margin-bottom:.4rem;color:var(--c-text)}
+.type-solo-content .type-jobs{font-size:.8rem}
+
+/* シークレットカード */
+.secret-card{
+  max-width:600px;margin:0 auto;
+  background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);
+  border-radius:var(--radius-md);overflow:hidden;
+  display:flex;align-items:center;
+  position:relative;
+  border:2px solid rgba(255,215,0,.3);
+  box-shadow:0 0 30px rgba(255,215,0,.08),0 8px 32px rgba(0,0,0,.3);
+}
+/* 金色ボーダーアニメーション */
+.secret-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,transparent,#ffd700,#ff8c00,#ffd700,transparent);
+  background-size:200% 100%;
+  animation:secretShimmer 3s ease-in-out infinite;
+  z-index:3;
+}
+@keyframes secretShimmer{
+  0%,100%{background-position:200% 0}
+  50%{background-position:-200% 0}
+}
+/* シルエット領域 */
+.secret-silhouette{
+  position:relative;flex-shrink:0;
+  width:clamp(130px,18vw,180px);
+  padding:1.2rem 0 1.2rem 1.2rem;
+}
+.secret-char{
+  width:100%;height:auto;
+  filter:brightness(0) drop-shadow(0 0 20px rgba(255,215,0,.3));
+  opacity:.7;
+  transition:filter .4s,opacity .4s;
+}
+.secret-card:hover .secret-char{
+  filter:brightness(0) drop-shadow(0 0 30px rgba(255,215,0,.6));
+  opacity:.9;
+}
+/* キャラの上のオーバーレイ（？マーク） */
+.secret-overlay{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-size:clamp(3rem,8vw,4.5rem);font-weight:900;
+  color:rgba(255,215,0,.5);
+  text-shadow:0 0 20px rgba(255,215,0,.3);
+  pointer-events:none;
+  animation:secretPulse 2s ease-in-out infinite;
+}
+.secret-overlay::after{content:'?'}
+@keyframes secretPulse{
+  0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}
+  50%{opacity:.9;transform:translate(-50%,-50%) scale(1.08)}
+}
+/* テキスト情報 */
+.secret-info{
+  flex:1;text-align:center;padding:1.5rem 1.5rem 1.5rem .5rem;
+}
+.secret-badge{
+  display:inline-block;
+  font-family:var(--f-heading);font-size:.7rem;font-weight:900;
+  color:#1a1a2e;background:linear-gradient(135deg,#ffd700,#ff8c00);
+  padding:.25rem 1rem;border-radius:100px;
+  letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:.7rem;
+  animation:badgeGlow 2.5s ease-in-out infinite;
+}
+@keyframes badgeGlow{
+  0%,100%{box-shadow:0 0 8px rgba(255,215,0,.3)}
+  50%{box-shadow:0 0 20px rgba(255,215,0,.6)}
+}
+.secret-title{
+  font-family:var(--f-heading);font-size:clamp(1.2rem,3vw,1.5rem);
+  font-weight:900;color:#ffd700;
+  margin-bottom:.6rem;letter-spacing:.1em;
+}
+.secret-desc{
+  font-size:.8rem;color:rgba(255,255,255,.7);
+  line-height:1.7;margin-bottom:.8rem;
+}
+.secret-cta{
+  font-family:var(--f-heading);font-size:.78rem;font-weight:700;
+  color:#ff8c00;
+  animation:ctaBlink 1.5s ease-in-out infinite;
+}
+@keyframes ctaBlink{
+  0%,100%{opacity:.6}
+  50%{opacity:1}
+}
+/* 背景パーティクル風ドット */
+.secret-card::after{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,215,0,.08) 1px,transparent 1px);
+  background-size:20px 20px;
+  pointer-events:none;z-index:1;
+}
+.secret-silhouette,.secret-info{position:relative;z-index:2}
+
+.diag-bottom-note{text-align:center;font-size:.85rem;color:var(--c-text-mid);font-weight:700;background:var(--c-bg-alt);padding:.8rem 1.2rem;border-radius:var(--radius-sm);border-left:4px solid var(--c-orange);max-width:620px;margin:0 auto}
 
 @media(max-width:768px){
-  .diag{grid-template-columns:1fr;text-align:center}
-  .diag-types{max-width:300px;margin:0 auto}
-  .diag-body{text-align:left}
-  .diag-list{text-align:left}
+  .type-pair{gap:.8rem;max-width:none}
+  .type-card-char{width:clamp(80px,30vw,120px)}
+  .type-solo{max-width:none;flex-direction:column;min-height:auto}
+  .type-solo-char{width:clamp(100px,35vw,160px);padding:1rem 0 0}
+  .type-solo-content{padding:1rem 1.2rem 1.2rem;text-align:center}
+  .secret-card{flex-direction:column;max-width:none;text-align:center}
+  .secret-silhouette{width:clamp(100px,35vw,150px);padding:1.5rem 0 0;margin:0 auto}
+  .secret-info{padding:1rem 1.2rem 1.5rem}
 }
+
+/* キャラクター帯 */
+.char-band{display:flex;justify-content:center;gap:1.5rem;padding:2rem 1rem;background:var(--c-bg-tinted);overflow:hidden}
+.char-band-img{height:clamp(80px,12vw,130px);width:auto;filter:drop-shadow(0 4px 12px rgba(0,0,0,.1));animation:orcaBob 3.5s ease-in-out infinite}
+.char-band-img:nth-child(2){animation-delay:.5s}
+.char-band-img:nth-child(3){animation-delay:1s}
+.char-band-img:nth-child(4){animation-delay:1.5s}
+
+/* CTA with orca */
+.cta-with-orca{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+.cta-orca{width:clamp(70px,10vw,110px);filter:drop-shadow(0 4px 12px rgba(0,0,0,.12));animation:orcaBob 3.5s ease-in-out infinite}
 
 .cta-wrap--pop{background:linear-gradient(135deg,rgba(245,166,35,.06),rgba(208,72,62,.06))}
 
@@ -625,7 +1089,7 @@ import '../styles/global.css';
   opacity:.35;
 }
 .final-body{text-align:center;position:relative;z-index:1}
-.final-logo{max-width:min(360px,65vw);margin:0 auto 1.5rem}
+.final-logo{width:100%;max-width:640px;margin:0 auto 1.5rem}
 .final-catch{font-family:var(--f-heading);font-size:clamp(1.4rem,4vw,2.4rem);font-weight:900;margin-bottom:1.2rem;line-height:1.4}
 .final-catch{color:var(--c-text)}
 

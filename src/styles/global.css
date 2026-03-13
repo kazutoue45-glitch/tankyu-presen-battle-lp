@@ -1,5 +1,5 @@
 /* ===========================
-   探求プレゼンバトル LP — Global Styles v4
+   探究プレゼンバトル LP — Global Styles v4
    白ベース × ポップなビビッドカラー / 大会ロゴ準拠
    =========================== */
 
@@ -10,7 +10,7 @@
   --c-orange: #f5a623;      /* 「プレゼン」レタリング */
   --c-amber: #fcb900;
   --c-red: #d0483e;         /* 「バトル」レタリング */
-  --c-green: #4caf50;       /* 「2025」 */
+  --c-green: #4caf50;       /* 「2026」 */
   --c-cyan: #0693e3;
   --c-pink: #f78da7;
 
@@ -18,12 +18,12 @@
   --c-accent: #f5a623;
   --c-accent-dark: #e09000;
 
-  /* NORDT */
-  --nordt-n: #4a90d9;
+  /* NORDT — N紫・O緑・R青・Dオレンジ・T赤 */
+  --nordt-n: #9b51e0;
   --nordt-o: #4caf50;
-  --nordt-r: #f5a623;
-  --nordt-d: #d0483e;
-  --nordt-t: #9b51e0;
+  --nordt-r: #4a90d9;
+  --nordt-d: #f5a623;
+  --nordt-t: #d0483e;
 
   /* Neutrals — 白ベース */
   --c-bg: #FFFFFF;
