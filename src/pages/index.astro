@@ -168,61 +168,92 @@ import '../styles/global.css';
   <div class="container">
     <h2 class="sec-heading rv">大会<span class="pop">スケジュール</span></h2>
 
-    <div class="schedule-timeline">
+    <div class="sched-flow">
+
       <!-- Phase 1: エントリー＆動画提出 -->
-      <div class="tl-phase rv" style="--phase-color:var(--nordt-n)">
-        <div class="tl-marker"><span class="tl-num">1</span></div>
-        <div class="tl-content">
-          <span class="tl-badge">エントリー＆動画提出</span>
-          <p class="tl-date">〜 8/20（締切）</p>
-          <p class="tl-desc">テーマに沿ってプレゼンを準備し、3分の動画を撮影して提出。</p>
-          <span class="tl-teams">応募チーム</span>
+      <div class="sched-card sched-card--1 rv" style="--pc:var(--nordt-n)">
+        <span class="sched-watermark" aria-hidden="true">1</span>
+        <div class="sched-head">
+          <span class="sched-step">STEP 1</span>
+          <span class="sched-date">〜 8/20（締切）</span>
         </div>
+        <h3 class="sched-title">エントリー＆動画提出</h3>
+        <p class="sched-desc">テーマに沿ってプレゼンを準備し、3分の動画を撮影して提出。</p>
+        <span class="sched-teams">📹 応募チーム</span>
+      </div>
+
+      <!-- コネクタ矢印 -->
+      <div class="sched-connector rv" style="--pc:var(--nordt-n)" aria-hidden="true">
+        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
+        <span class="sched-funnel">🔽 1,000チームから選抜！</span>
       </div>
 
       <!-- Phase 2: 一次選考 -->
-      <div class="tl-phase rv" style="--phase-color:var(--nordt-o)">
-        <div class="tl-marker"><span class="tl-num">2</span></div>
-        <div class="tl-content">
-          <span class="tl-badge">一次選考（動画審査）</span>
-          <p class="tl-date">8/21 〜 9/19</p>
-          <p class="tl-desc">提出された動画をNORDT基準で審査。9/20に通過チームを発表。</p>
-          <span class="tl-teams">1,000 → 100チームへ</span>
+      <div class="sched-card sched-card--2 rv" style="--pc:var(--nordt-o)">
+        <span class="sched-watermark" aria-hidden="true">2</span>
+        <div class="sched-head">
+          <span class="sched-step">STEP 2</span>
+          <span class="sched-date">8/21 〜 9/19</span>
         </div>
+        <h3 class="sched-title">一次選考（動画審査）</h3>
+        <p class="sched-desc">提出された動画をNORDT基準で審査。9/20に通過チームを発表。</p>
+        <span class="sched-teams">🎬 1,000 → 100チームへ</span>
+      </div>
+
+      <!-- コネクタ矢印 -->
+      <div class="sched-connector rv" style="--pc:var(--nordt-o)" aria-hidden="true">
+        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
+        <span class="sched-funnel">🔽 さらに10チームに絞り込み！</span>
       </div>
 
       <!-- Phase 3: 二次選考 -->
-      <div class="tl-phase rv" style="--phase-color:var(--nordt-r)">
-        <div class="tl-marker"><span class="tl-num">3</span></div>
-        <div class="tl-content">
-          <span class="tl-badge">二次選考（Zoomプレゼン）</span>
-          <p class="tl-date">10/1 〜 10/19</p>
-          <p class="tl-desc">通過チームがZoomでライブプレゼン。審査を経て10/20に結果発表。</p>
-          <span class="tl-teams">100 → 10チームへ</span>
+      <div class="sched-card sched-card--3 rv" style="--pc:var(--nordt-r)">
+        <span class="sched-watermark" aria-hidden="true">3</span>
+        <div class="sched-head">
+          <span class="sched-step">STEP 3</span>
+          <span class="sched-date">10/1 〜 10/19</span>
         </div>
+        <h3 class="sched-title">二次選考（Zoomプレゼン）</h3>
+        <p class="sched-desc">通過チームがZoomでライブプレゼン。審査を経て10/20に結果発表。</p>
+        <span class="sched-teams">💻 100 → 10チームへ</span>
+      </div>
+
+      <!-- コネクタ矢印 -->
+      <div class="sched-connector rv" style="--pc:var(--nordt-r)" aria-hidden="true">
+        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
+        <span class="sched-funnel">🎯 プロのレクチャーで本気の準備！</span>
       </div>
 
       <!-- Phase 4: 個別レクチャー -->
-      <div class="tl-phase rv" style="--phase-color:var(--nordt-d)">
-        <div class="tl-marker"><span class="tl-num">4</span></div>
-        <div class="tl-content">
-          <span class="tl-badge">個別レクチャー</span>
-          <p class="tl-date">10/21 〜 11/15</p>
-          <p class="tl-desc">決勝進出10チームに、プレゼンのプロがオンラインでマンツーマン指導。</p>
-          <span class="tl-teams">10チーム</span>
+      <div class="sched-card sched-card--4 rv" style="--pc:var(--nordt-d)">
+        <span class="sched-watermark" aria-hidden="true">4</span>
+        <div class="sched-head">
+          <span class="sched-step">STEP 4</span>
+          <span class="sched-date">10/21 〜 11/15</span>
         </div>
+        <h3 class="sched-title">個別レクチャー</h3>
+        <p class="sched-desc">決勝進出10チームに、プレゼンのプロがオンラインでマンツーマン指導。</p>
+        <span class="sched-teams">🎤 10チーム</span>
       </div>
 
-      <!-- Phase 5: 決勝 -->
-      <div class="tl-phase rv" style="--phase-color:var(--nordt-t)">
-        <div class="tl-marker"><span class="tl-num">5</span></div>
-        <div class="tl-content">
-          <span class="tl-badge">オンライン決勝</span>
-          <p class="tl-date">11/22（日）</p>
-          <p class="tl-desc">ファイナリスト10チームが最高のプレゼンを披露。優勝チームが決定！</p>
-          <span class="tl-teams">10チーム</span>
-        </div>
+      <!-- コネクタ矢印 -->
+      <div class="sched-connector rv" style="--pc:var(--nordt-d)" aria-hidden="true">
+        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
+        <span class="sched-funnel">🏆 いよいよ決勝！</span>
       </div>
+
+      <!-- Phase 5: 決勝（最大・最派手） -->
+      <div class="sched-card sched-card--5 sched-card--final rv" style="--pc:var(--nordt-t)">
+        <span class="sched-watermark" aria-hidden="true">5</span>
+        <div class="sched-head">
+          <span class="sched-step">FINAL</span>
+          <span class="sched-date">11/22（日）</span>
+        </div>
+        <h3 class="sched-title">🏆 オンライン決勝</h3>
+        <p class="sched-desc">ファイナリスト10チームが最高のプレゼンを披露。優勝チームが決定！</p>
+        <span class="sched-teams">🔥 10チーム → 優勝チーム決定！</span>
+      </div>
+
     </div>
 
     <p class="schedule-note rv">※ 一次選考の通過チーム数は応募総数の10％（上限100チーム）となります。</p>
@@ -840,75 +871,128 @@ import '../styles/global.css';
 
 
 /* ─────────── S3.5 SCHEDULE ─────────── */
-.schedule-timeline{
-  max-width:640px;margin:0 auto 2rem;position:relative;
-}
-/* 縦ライン */
-.schedule-timeline::before{
-  content:'';position:absolute;
-  left:19px;top:21px;bottom:21px;width:4px;
-  background:linear-gradient(to bottom,var(--nordt-n),var(--nordt-o),var(--nordt-r),var(--nordt-d),var(--nordt-t));
-  border-radius:4px;
+
+/* フロー全体 */
+.sched-flow{
+  max-width:680px;margin:0 auto 2rem;
+  display:flex;flex-direction:column;align-items:center;
 }
 
-.tl-phase{
-  display:flex;align-items:flex-start;gap:1.2rem;
-  margin-bottom:clamp(1.8rem,4vw,2.5rem);position:relative;
+/* カード共通 */
+.sched-card{
+  position:relative;overflow:hidden;
+  width:100%;
+  background:color-mix(in srgb,var(--pc) 8%,#fff);
+  border:3px solid color-mix(in srgb,var(--pc) 30%,#fff);
+  border-radius:var(--radius-lg);
+  padding:clamp(1.4rem,3.5vw,2rem) clamp(1.6rem,4vw,2.2rem);
+  transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s,border-color .35s;
 }
-.tl-phase:last-child{margin-bottom:0}
-
-/* 丸ナンバー */
-.tl-marker{flex-shrink:0;z-index:2}
-.tl-num{
-  display:flex;align-items:center;justify-content:center;
-  width:42px;height:42px;border-radius:50%;
-  background:var(--phase-color);color:#fff;
-  font-family:var(--f-heading);font-size:1.15rem;font-weight:900;
-  box-shadow:0 3px 12px rgba(0,0,0,.12);
-}
-
-/* コンテンツカード */
-.tl-content{
-  flex:1;min-width:0;
-  background:#fff;border-radius:var(--radius-md);
-  padding:clamp(1.2rem,3vw,1.6rem) clamp(1.4rem,3.5vw,1.8rem);
-  border:2px solid var(--c-border);
-  border-left:5px solid var(--phase-color);
-  box-shadow:var(--shadow-sm);
-  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
-}
-.tl-content:hover{
-  transform:translateY(-4px);box-shadow:var(--shadow-md);
+.sched-card:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 12px 32px color-mix(in srgb,var(--pc) 25%,transparent);
+  border-color:var(--pc);
 }
 
-/* フェーズ名バッジ */
-.tl-badge{
+/* ウォーターマーク番号（カード背景に大きく薄く表示） */
+.sched-watermark{
+  position:absolute;
+  right:-8px;top:50%;transform:translateY(-50%);
+  font-family:var(--f-heading);font-size:clamp(7rem,18vw,11rem);
+  font-weight:900;line-height:1;
+  color:color-mix(in srgb,var(--pc) 10%,transparent);
+  pointer-events:none;user-select:none;
+  z-index:0;
+}
+
+/* カード内コンテンツはウォーターマークの上に */
+.sched-head,.sched-title,.sched-desc,.sched-teams{
+  position:relative;z-index:1;
+}
+
+/* ヘッダー（ステップ番号 + 日付） */
+.sched-head{
+  display:flex;align-items:center;gap:.7rem;
+  margin-bottom:.5rem;flex-wrap:wrap;
+}
+.sched-step{
   display:inline-block;
-  font-family:var(--f-heading);font-size:clamp(.82rem,2vw,1rem);font-weight:900;
-  color:var(--phase-color);
-  background:color-mix(in srgb,var(--phase-color) 10%,#fff);
-  padding:.25rem .9rem;border-radius:100px;
-  margin-bottom:.5rem;letter-spacing:.04em;
+  font-family:var(--f-heading);font-size:clamp(.72rem,1.8vw,.85rem);
+  font-weight:900;letter-spacing:.1em;
+  color:#fff;background:var(--pc);
+  padding:.28rem .85rem;border-radius:100px;
+}
+.sched-date{
+  font-family:var(--f-heading);font-size:clamp(.8rem,2vw,.95rem);
+  font-weight:700;color:var(--c-text-mid);
 }
 
-/* 日付 */
-.tl-date{
-  font-family:var(--f-heading);font-size:clamp(.88rem,2.2vw,1.05rem);font-weight:700;
-  color:var(--c-text);margin-bottom:.3rem;
+/* タイトル */
+.sched-title{
+  font-family:var(--f-heading);
+  font-size:clamp(1.05rem,2.8vw,1.3rem);
+  font-weight:900;color:var(--pc);
+  margin-bottom:.4rem;
 }
 
 /* 説明文 */
-.tl-desc{
-  font-size:clamp(.82rem,2vw,.92rem);color:var(--c-text-light);
-  line-height:1.75;margin-bottom:.5rem;
+.sched-desc{
+  font-size:clamp(.82rem,2vw,.92rem);
+  color:var(--c-text-light);line-height:1.75;
+  margin-bottom:.6rem;
 }
 
-/* チーム数 */
-.tl-teams{
+/* チーム数バッジ */
+.sched-teams{
   display:inline-block;
-  font-family:var(--f-pop);font-size:clamp(.72rem,1.8vw,.82rem);font-weight:700;
-  color:#fff;background:var(--phase-color);
-  padding:.2rem .7rem;border-radius:100px;
+  font-family:var(--f-pop);font-size:clamp(.75rem,1.8vw,.88rem);
+  font-weight:700;color:#fff;
+  background:var(--pc);
+  padding:.3rem .9rem;border-radius:100px;
+  box-shadow:0 2px 8px color-mix(in srgb,var(--pc) 30%,transparent);
+}
+
+/* ── カードサイズ変化（フェーズが進むほど大きく） ── */
+.sched-card--1{max-width:92%}
+.sched-card--2{max-width:94%}
+.sched-card--3{max-width:96%}
+.sched-card--4{max-width:98%}
+.sched-card--5{max-width:100%}
+
+/* 決勝カード（最大・最派手） */
+.sched-card--final{
+  background:linear-gradient(135deg,
+    color-mix(in srgb,var(--pc) 12%,#fff) 0%,
+    color-mix(in srgb,var(--pc) 6%,#fff) 50%,
+    color-mix(in srgb,var(--nordt-d) 8%,#fff) 100%);
+  border-width:4px;
+  border-color:var(--pc);
+  box-shadow:0 8px 28px color-mix(in srgb,var(--pc) 20%,transparent);
+  padding:clamp(1.8rem,4.5vw,2.6rem) clamp(2rem,5vw,2.8rem);
+}
+.sched-card--final .sched-title{
+  font-size:clamp(1.2rem,3.2vw,1.55rem);
+}
+.sched-card--final .sched-step{
+  font-size:clamp(.82rem,2vw,.95rem);
+  padding:.35rem 1rem;
+}
+
+/* ── コネクタ矢印（カード間） ── */
+.sched-connector{
+  display:flex;flex-direction:column;align-items:center;
+  padding:.3rem 0;
+}
+.sched-arrow{
+  width:28px;height:36px;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.1));
+}
+.sched-funnel{
+  font-family:var(--f-pop);
+  font-size:clamp(.72rem,1.8vw,.85rem);
+  font-weight:700;color:var(--pc);
+  margin-top:.1rem;
+  text-align:center;
 }
 
 /* 注記 */
@@ -919,10 +1003,15 @@ import '../styles/global.css';
   border-radius:var(--radius-sm);
 }
 
-/* モバイル調整 */
+/* ── モバイル調整 ── */
 @media(max-width:600px){
-  .tl-num{width:36px;height:36px;font-size:1rem}
-  .schedule-timeline::before{left:16px;top:18px;bottom:18px}
+  .sched-card--1,.sched-card--2,.sched-card--3,.sched-card--4,.sched-card--5{
+    max-width:100%;
+  }
+  .sched-watermark{font-size:5.5rem;right:-4px}
+  .sched-connector{padding:.15rem 0}
+  .sched-arrow{width:22px;height:28px}
+  .sched-funnel{font-size:.7rem}
 }
 
 
