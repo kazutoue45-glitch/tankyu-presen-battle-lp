@@ -34,11 +34,6 @@ import '../styles/global.css';
       <span class="cohost-label">共同開催</span>
     </div>
 
-    <!-- 日付 -->
-    <div class="hero-topbar">
-      <span class="hero-date">2026.10.4 <small>SUN</small></span>
-    </div>
-
     <!-- 大会ロゴ -->
     <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="hero-logo" />
 
@@ -162,6 +157,75 @@ import '../styles/global.css';
         <div class="nordt-card rv" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><div><strong>Talk</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div></div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  S3.5  大会スケジュール
+  ============================================================ -->
+<section class="sec sec--white" id="schedule">
+  <div class="container">
+    <h2 class="sec-heading rv">大会<span class="pop">スケジュール</span></h2>
+
+    <div class="schedule-timeline">
+      <!-- Phase 1: エントリー＆動画提出 -->
+      <div class="tl-phase rv" style="--phase-color:var(--nordt-n)">
+        <div class="tl-marker"><span class="tl-num">1</span></div>
+        <div class="tl-content">
+          <span class="tl-badge">エントリー＆動画提出</span>
+          <p class="tl-date">〜 8/20（締切）</p>
+          <p class="tl-desc">テーマに沿ってプレゼンを準備し、3分の動画を撮影して提出。</p>
+          <span class="tl-teams">応募チーム</span>
+        </div>
+      </div>
+
+      <!-- Phase 2: 一次選考 -->
+      <div class="tl-phase rv" style="--phase-color:var(--nordt-o)">
+        <div class="tl-marker"><span class="tl-num">2</span></div>
+        <div class="tl-content">
+          <span class="tl-badge">一次選考（動画審査）</span>
+          <p class="tl-date">8/21 〜 9/19</p>
+          <p class="tl-desc">提出された動画をNORDT基準で審査。9/20に通過チームを発表。</p>
+          <span class="tl-teams">1,000 → 100チームへ</span>
+        </div>
+      </div>
+
+      <!-- Phase 3: 二次選考 -->
+      <div class="tl-phase rv" style="--phase-color:var(--nordt-r)">
+        <div class="tl-marker"><span class="tl-num">3</span></div>
+        <div class="tl-content">
+          <span class="tl-badge">二次選考（Zoomプレゼン）</span>
+          <p class="tl-date">10/1 〜 10/19</p>
+          <p class="tl-desc">通過チームがZoomでライブプレゼン。審査を経て10/20に結果発表。</p>
+          <span class="tl-teams">100 → 10チームへ</span>
+        </div>
+      </div>
+
+      <!-- Phase 4: 個別レクチャー -->
+      <div class="tl-phase rv" style="--phase-color:var(--nordt-d)">
+        <div class="tl-marker"><span class="tl-num">4</span></div>
+        <div class="tl-content">
+          <span class="tl-badge">個別レクチャー</span>
+          <p class="tl-date">10/21 〜 11/15</p>
+          <p class="tl-desc">決勝進出10チームに、プレゼンのプロがオンラインでマンツーマン指導。</p>
+          <span class="tl-teams">10チーム</span>
+        </div>
+      </div>
+
+      <!-- Phase 5: 決勝 -->
+      <div class="tl-phase rv" style="--phase-color:var(--nordt-t)">
+        <div class="tl-marker"><span class="tl-num">5</span></div>
+        <div class="tl-content">
+          <span class="tl-badge">オンライン決勝</span>
+          <p class="tl-date">11/22（日）</p>
+          <p class="tl-desc">ファイナリスト10チームが最高のプレゼンを披露。優勝チームが決定！</p>
+          <span class="tl-teams">10チーム</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="schedule-note rv">※ 一次選考の通過チーム数は応募総数の10％（上限100チーム）となります。</p>
   </div>
 </section>
 
@@ -368,11 +432,11 @@ import '../styles/global.css';
   <div class="container">
     <h2 class="sec-heading rv">参加するには？</h2>
     <ol class="steps">
-      <li class="step rv" style="--sc:var(--nordt-n)"><span class="step-n">1</span><div><strong>このページから申し込む</strong><p>フォームに必要事項を入力して送信するだけ。</p></div></li>
-      <li class="step rv" style="--sc:var(--nordt-o)"><span class="step-n">2</span><div><strong>テーマを確認する</strong><p>「あなたの街の１０年後！―地域活性化を提案せよ―」</p></div></li>
-      <li class="step rv" style="--sc:var(--nordt-r)"><span class="step-n">3</span><div><strong>分析やアイデアをプレゼンスライドにまとめて準備する</strong></div></li>
-      <li class="step rv" style="--sc:var(--nordt-d)"><span class="step-n">4</span><div><strong>当日、オンラインでプレゼンする</strong></div></li>
-      <li class="step rv" style="--sc:var(--nordt-t)"><span class="step-n">5</span><div><strong>後日、プレゼンタイプ診断が届く</strong></div></li>
+      <li class="step rv" style="--sc:var(--nordt-n)"><span class="step-n">1</span><div><strong>このページからエントリーする</strong><p>フォームに必要事項を入力して送信するだけ。</p></div></li>
+      <li class="step rv" style="--sc:var(--nordt-o)"><span class="step-n">2</span><div><strong>プレゼン動画を撮って提出する</strong><p>テーマに沿ってプレゼンを準備し、3分の動画を撮影。8/20までに提出。</p></div></li>
+      <li class="step rv" style="--sc:var(--nordt-r)"><span class="step-n">3</span><div><strong>一次選考を突破したら、Zoomで二次選考</strong><p>動画審査を通過した100チームが、Zoomでライブプレゼン。</p></div></li>
+      <li class="step rv" style="--sc:var(--nordt-d)"><span class="step-n">4</span><div><strong>決勝進出チームにはプロの個別レクチャー</strong><p>トップ10チームに、プレゼンのプロがマンツーマンで指導。</p></div></li>
+      <li class="step rv" style="--sc:var(--nordt-t)"><span class="step-n">5</span><div><strong>オンライン決勝で最高のプレゼンを披露</strong><p>11/22（日）、オンラインで決勝戦。</p></div></li>
     </ol>
   </div>
 </section>
@@ -602,20 +666,6 @@ import '../styles/global.css';
 }
 @keyframes slam{0%{opacity:0;transform:scale(1.3) translateY(-10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
 
-/* 上部帯: 日付 + バッジ */
-.hero-topbar{
-  display:flex;flex-direction:column;align-items:center;gap:.8rem;
-  margin-bottom:1.2rem;animation:fadeUp .5s .2s both;
-}
-.hero-date{
-  font-family:var(--f-heading);font-size:clamp(1.8rem,5vw,3rem);font-weight:900;
-  background:linear-gradient(135deg,var(--c-orange),var(--c-red));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;
-  letter-spacing:.04em;line-height:1.2;
-  filter:drop-shadow(0 2px 8px rgba(245,166,35,.25));
-}
-.hero-date small{font-size:.5em;-webkit-text-fill-color:var(--c-red);opacity:.85;margin-left:.15em}
 .hero-badges-wrap{
   display:flex;flex-direction:column;align-items:center;gap:.4rem;
   margin-bottom:clamp(1rem,3vw,1.5rem);
@@ -787,6 +837,105 @@ import '../styles/global.css';
 .nordt-card strong{font-family:var(--f-heading);font-size:1rem;margin-right:.4rem}
 .nordt-card small{color:var(--c-text-muted);font-size:.78rem}
 .nordt-card p{font-size:.88rem;color:var(--c-text-light);margin-top:.15rem}
+
+
+/* ─────────── S3.5 SCHEDULE ─────────── */
+.schedule-timeline{
+  max-width:640px;margin:0 auto 2rem;position:relative;
+  padding-left:clamp(2.4rem,6vw,3.2rem);
+}
+/* 縦ライン */
+.schedule-timeline::before{
+  content:'';position:absolute;
+  left:clamp(1.4rem,3.6vw,1.9rem);top:0;bottom:0;width:4px;
+  background:linear-gradient(
+    to bottom,
+    var(--nordt-n) 0%,var(--nordt-n) 20%,
+    var(--nordt-o) 20%,var(--nordt-o) 40%,
+    var(--nordt-r) 40%,var(--nordt-r) 60%,
+    var(--nordt-d) 60%,var(--nordt-d) 80%,
+    var(--nordt-t) 80%,var(--nordt-t) 100%
+  );
+  border-radius:4px;
+}
+
+.tl-phase{
+  position:relative;margin-bottom:clamp(1.8rem,4vw,2.5rem);
+}
+.tl-phase:last-child{margin-bottom:0}
+
+/* 丸ナンバー */
+.tl-marker{
+  position:absolute;
+  left:calc(clamp(1.4rem,3.6vw,1.9rem) - clamp(2.4rem,6vw,3.2rem) - 20px);
+  top:0;z-index:2;
+}
+.tl-num{
+  display:flex;align-items:center;justify-content:center;
+  width:42px;height:42px;border-radius:50%;
+  background:var(--phase-color);color:#fff;
+  font-family:var(--f-heading);font-size:1.15rem;font-weight:900;
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+/* コンテンツカード */
+.tl-content{
+  background:#fff;border-radius:var(--radius-md);
+  padding:clamp(1.2rem,3vw,1.6rem) clamp(1.4rem,3.5vw,1.8rem);
+  border:2px solid var(--c-border);
+  border-left:5px solid var(--phase-color);
+  box-shadow:var(--shadow-sm);
+  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
+}
+.tl-content:hover{
+  transform:translateY(-4px);box-shadow:var(--shadow-md);
+}
+
+/* フェーズ名バッジ */
+.tl-badge{
+  display:inline-block;
+  font-family:var(--f-heading);font-size:clamp(.82rem,2vw,1rem);font-weight:900;
+  color:var(--phase-color);
+  background:color-mix(in srgb,var(--phase-color) 10%,#fff);
+  padding:.25rem .9rem;border-radius:100px;
+  margin-bottom:.5rem;letter-spacing:.04em;
+}
+
+/* 日付 */
+.tl-date{
+  font-family:var(--f-heading);font-size:clamp(.88rem,2.2vw,1.05rem);font-weight:700;
+  color:var(--c-text);margin-bottom:.3rem;
+}
+
+/* 説明文 */
+.tl-desc{
+  font-size:clamp(.82rem,2vw,.92rem);color:var(--c-text-light);
+  line-height:1.75;margin-bottom:.5rem;
+}
+
+/* チーム数 */
+.tl-teams{
+  display:inline-block;
+  font-family:var(--f-pop);font-size:clamp(.72rem,1.8vw,.82rem);font-weight:700;
+  color:#fff;background:var(--phase-color);
+  padding:.2rem .7rem;border-radius:100px;
+}
+
+/* 注記 */
+.schedule-note{
+  text-align:center;font-size:.8rem;color:var(--c-text-muted);
+  max-width:540px;margin:0 auto;
+  padding:.6rem 1rem;background:var(--c-bg-alt);
+  border-radius:var(--radius-sm);
+}
+
+/* モバイル調整 */
+@media(max-width:600px){
+  .schedule-timeline{padding-left:2.2rem}
+  .schedule-timeline::before{left:1.2rem}
+  .tl-marker{left:calc(1.2rem - 2.2rem - 20px)}
+  .tl-num{width:36px;height:36px;font-size:1rem}
+}
 
 
 /* ─────────── S4 DIAGNOSIS ─────────── */
