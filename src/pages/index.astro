@@ -537,14 +537,14 @@ import '../styles/global.css';
   <div class="container">
     <h2 class="sec-heading rv">よくある質問</h2>
     <div class="faq-list">
-      <details class="faq rv"><summary>参加費はいくらですか？</summary><p>無料です。参加にかかる費用は一切ありません。</p></details>
-      <details class="faq rv"><summary>プレゼンの経験がなくても大丈夫ですか？</summary><p>大丈夫です。NORDT（5つの軸）で「考え」も「伝え方」も総合的に評価します。初めてでも安心して挑戦できます。</p></details>
-      <details class="faq rv"><summary>テーマは何ですか？</summary><p>「あなたの街の１０年後！―地域活性化を提案せよ―」です。このテーマに沿って準備を進めましょう。</p></details>
-      <details class="faq rv"><summary>小学生の低学年でも参加できますか？</summary><p>小学生〜高校生が対象です。学年ではなく「課題を解決したい」という気持ちがあれば、どなたでも参加できます。</p></details>
-      <details class="faq rv"><summary>当日は保護者の同席が必要ですか？</summary><p>オンライン開催のため、ご自宅から参加できます。保護者の方の同席は自由ですが、必須ではありません。</p></details>
-      <details class="faq rv"><summary>プレゼンタイプ診断はいつ届きますか？</summary><p>大会終了後1週間以内に、全員にお届けします。</p></details>
-      <details class="faq rv"><summary>プレゼンの準備は何をすればいいですか？</summary><p>テーマに対して「課題をどう解決するか」を考え、スライドを作って発表の準備をしましょう。スライドは必須です。</p></details>
-      <details class="faq rv"><summary>生成AI（ChatGPTなど）を使ってもいいですか？</summary><p>使ってOKです。ただし、AIの出力をそのまま使っても「いい提案」にはなりません。オリジナリティのないプレゼンはNORDTの評価で厳しくなるので、あくまで自分の考えをベースにしましょう。</p></details>
+      <div class="faq rv"><h3 class="faq-q">参加費はいくらですか？</h3><p>無料です。参加にかかる費用は一切ありません。</p></div>
+      <div class="faq rv"><h3 class="faq-q">プレゼンの経験がなくても大丈夫ですか？</h3><p>大丈夫です。NORDT（5つの軸）で「考え」も「伝え方」も総合的に評価します。初めてでも安心して挑戦できます。</p></div>
+      <div class="faq rv"><h3 class="faq-q">テーマは何ですか？</h3><p>「あなたの街の１０年後！―地域活性化を提案せよ―」です。このテーマに沿って準備を進めましょう。</p></div>
+      <div class="faq rv"><h3 class="faq-q">小学生の低学年でも参加できますか？</h3><p>小学生〜高校生が対象です。学年ではなく「課題を解決したい」という気持ちがあれば、どなたでも参加できます。</p></div>
+      <div class="faq rv"><h3 class="faq-q">当日は保護者の同席が必要ですか？</h3><p>オンライン開催のため、ご自宅から参加できます。保護者の方の同席は自由ですが、必須ではありません。</p></div>
+      <div class="faq rv"><h3 class="faq-q">プレゼンタイプ診断はいつ届きますか？</h3><p>大会終了後1週間以内に、全員にお届けします。</p></div>
+      <div class="faq rv"><h3 class="faq-q">プレゼンの準備は何をすればいいですか？</h3><p>テーマに対して「課題をどう解決するか」を考え、スライドを作って発表の準備をしましょう。スライドは必須です。</p></div>
+      <div class="faq rv"><h3 class="faq-q">生成AI（ChatGPTなど）を使ってもいいですか？</h3><p>使ってOKです。ただし、AIの出力をそのまま使っても「いい提案」にはなりません。オリジナリティのないプレゼンはNORDTの評価で厳しくなるので、あくまで自分の考えをベースにしましょう。</p></div>
     </div>
   </div>
 </section>
@@ -1334,21 +1334,17 @@ import '../styles/global.css';
 
 
 /* ─────────── S8 FAQ ─────────── */
-.faq-list{max-width:720px;margin:0 auto}
-.faq{border-bottom:2px solid var(--c-border)}
-.faq summary{
-  padding:1.3rem 0;font-family:var(--f-heading);font-weight:700;font-size:1.02rem;cursor:pointer;
-  list-style:none;display:flex;align-items:center;gap:.7rem;transition:color .2s;
+.faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:1rem}
+.faq{border-bottom:2px solid var(--c-border);padding-bottom:1.3rem}
+.faq-q{
+  font-family:var(--f-heading);font-weight:700;font-size:1.02rem;
+  display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem;
 }
-.faq summary:hover{color:var(--c-orange)}
-.faq summary::before{
+.faq-q::before{
   content:'Q';background:var(--c-orange);color:#fff;font-size:.75rem;font-weight:900;
   width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
-.faq summary::after{content:'+';margin-left:auto;font-size:1.4rem;color:var(--c-orange);transition:transform .3s;flex-shrink:0}
-.faq[open] summary::after{transform:rotate(45deg)}
-.faq summary::-webkit-details-marker{display:none}
-.faq p{padding:0 0 1.3rem 2.4rem;font-size:.92rem;color:var(--c-text-light);line-height:1.85}
+.faq p{padding:0 0 0 2.4rem;font-size:.92rem;color:var(--c-text-light);line-height:1.85}
 
 
 /* ─────────── S9 FINAL CTA ─────────── */
