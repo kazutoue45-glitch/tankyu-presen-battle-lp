@@ -33,11 +33,7 @@ import '../styles/global.css';
   S1  ファーストビュー — リッチ×ポップ / 大会ロゴ準拠
   ============================================================ -->
 <section class="hero">
-  <!-- 背景イラスト -->
-  <div class="hero-bg" aria-hidden="true">
-    <img src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`} alt="" class="hero-bg-img" />
-  </div>
-  <div class="hero-overlay" aria-hidden="true"></div>
+  <!-- 背景 -->
   <div class="hero-spotlight" aria-hidden="true"></div>
 
   <!-- 紙吹雪（NORDT5色） -->
@@ -220,7 +216,7 @@ import '../styles/global.css';
         お使いのブラウザは動画再生に対応していません。
       </video>
     </div>
-    <p class="movie-caption rv">2025年大会では、小学生から中学生まで多くのチームが「自分だけの提案」をぶつけ合いました。<br>3分間のプレゼンに込められた熱量と、審査員が本気でうなずく瞬間をご覧ください。</p>
+    <p class="movie-caption rv">2025年大会では、小学生から高校生まで多くのチームが「自分だけの提案」をぶつけ合いました。<br>3分間のプレゼンに込められた熱量と、審査員が本気でうなずく瞬間をご覧ください。</p>
   </div>
 </section>
 
@@ -502,7 +498,7 @@ import '../styles/global.css';
     <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="" class="cta-orca" aria-hidden="true" />
     <div>
       <p class="cta-sub"><strong>キミのプレゼンタイプ、知りたくない？</strong></p>
-      <p class="cta-sub">「12診断」たった1分でセルフチェックできます。</p>
+      <p class="cta-sub">「12診断」たった数分でセルフチェックできます。</p>
       <a href="https://detection-ogawa.web.app" class="cta-btn" target="_blank" rel="noopener noreferrer">プレゼンタイプを診断する</a>
     </div>
   </div>
@@ -634,7 +630,12 @@ import '../styles/global.css';
       <span class="ft-x">&times;</span>
       <a href="https://kids.valed.jp/" target="_blank" rel="noopener noreferrer"><img src={`${import.meta.env.BASE_URL}images/valed-logo.png`} alt="バレッドキッズ" /></a>
     </div>
-    <p class="ft-social"><a href="https://www.tiktok.com/@prelabo?_r=1&_t=ZS-94tLesYEsNs" target="_blank" rel="noopener noreferrer" class="ft-tiktok">TikTok @prelabo</a></p>
+    <div class="ft-social">
+      <a href="https://www.tiktok.com/@prelabo?_r=1&_t=ZS-94tLesYEsNs" target="_blank" rel="noopener noreferrer" class="ft-sns-link">TikTok</a>
+      <a href="https://www.youtube.com/@小川探究-c3w" target="_blank" rel="noopener noreferrer" class="ft-sns-link">YouTube</a>
+      <a href="https://www.instagram.com/prelabo_ogawa.tankyu/" target="_blank" rel="noopener noreferrer" class="ft-sns-link">Instagram</a>
+      <a href="https://lin.ee/9zFVLu5" target="_blank" rel="noopener noreferrer" class="ft-sns-link ft-sns-link--line">公式LINE（お問い合わせ）</a>
+    </div>
     <p>&copy; 2026 小川探究 &times; バレッドキッズ All Rights Reserved.</p>
   </div>
 </footer>
@@ -713,7 +714,7 @@ import '../styles/global.css';
 .hero{
   position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;
   text-align:center;overflow:hidden;
-  background:#0a122a;
+  background:linear-gradient(135deg,#1a1040 0%,#0f2a5e 30%,#1a3a6e 50%,#2a1a50 70%,#1a1040 100%);
   color:#fff;
 }
 
@@ -1496,9 +1497,14 @@ import '../styles/global.css';
 .ft-logos{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.8rem}
 .ft-logos img{height:28px;width:auto;opacity:.45;transition:opacity .2s}
 .ft-logos a:hover img{opacity:.7}
-.ft-social{margin-bottom:.6rem}
-.ft-tiktok{color:var(--c-text-muted);font-size:.82rem;text-decoration:none;transition:color .2s}
-.ft-tiktok:hover{color:var(--c-text-mid)}
+.ft-social{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.2rem;margin-bottom:1rem}
+.ft-sns-link{
+  font-size:.8rem;font-weight:600;color:var(--c-text-muted);
+  text-decoration:none;transition:color .2s;
+}
+.ft-sns-link:hover{color:var(--c-text)}
+.ft-sns-link--line{color:var(--c-green)}
+.ft-sns-link--line:hover{color:#06c755}
 .ft-x{font-weight:700;color:var(--c-text-muted);font-size:.9rem}
 
 /* ── Desktop optimization (1024px+) ── */
