@@ -187,10 +187,10 @@ import '../styles/global.css';
   <div class="container">
     <h2 class="sec-heading rv">昨年の<span class="pop">バトルを見る</span></h2>
     <div class="movie-wrap rv">
-      <div class="movie-placeholder">
-        <span class="movie-play-icon">▶</span>
-        <p>大会ダイジェスト映像（準備中）</p>
-      </div>
+      <video class="movie-video" controls preload="metadata" playsinline poster="">
+        <source src={`${import.meta.env.BASE_URL}images/2025-digest.mp4`} type="video/mp4" />
+        お使いのブラウザは動画再生に対応していません。
+      </video>
     </div>
     <p class="movie-caption rv">2025年大会では、小学生から中学生まで多くのチームが「自分だけの提案」をぶつけ合いました。<br>3分間のプレゼンに込められた熱量と、審査員が本気でうなずく瞬間をご覧ください。</p>
   </div>
@@ -902,22 +902,11 @@ import '../styles/global.css';
 
 /* ─────────── S2.5 MOVIE ─────────── */
 .movie-wrap{max-width:720px;margin:0 auto 1.5rem}
-.movie-placeholder{
-  aspect-ratio:16/9;background:#1a1a2e;border-radius:var(--radius-md);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:.8rem;color:rgba(255,255,255,.5);cursor:pointer;
-  transition:background .3s;
+.movie-video{
+  width:100%;border-radius:var(--radius-md);
+  background:#1a1a2e;
+  box-shadow:var(--shadow-lg);
 }
-.movie-placeholder:hover{background:#2a2a3e}
-.movie-play-icon{
-  font-size:3rem;width:72px;height:72px;
-  display:flex;align-items:center;justify-content:center;
-  background:rgba(255,255,255,.12);border-radius:50%;
-  border:3px solid rgba(255,255,255,.25);
-  transition:transform .3s,background .3s;
-}
-.movie-placeholder:hover .movie-play-icon{transform:scale(1.1);background:rgba(245,166,35,.3)}
-.movie-placeholder p{font-family:var(--f-heading);font-size:.9rem;font-weight:700}
 .movie-caption{
   text-align:center;font-size:.92rem;color:var(--c-text-light);
   line-height:1.85;max-width:640px;margin:0 auto;
