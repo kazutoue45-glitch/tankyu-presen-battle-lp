@@ -1422,4 +1422,78 @@ import '../styles/global.css';
 .ft-tiktok{color:var(--c-text-muted);font-size:.82rem;text-decoration:none;transition:color .2s}
 .ft-tiktok:hover{color:var(--c-text-mid)}
 .ft-x{font-weight:700;color:var(--c-text-muted);font-size:.9rem}
+
+/* ── Desktop optimization (1024px+) ── */
+@media(min-width:1024px){
+  /* Header */
+  .header-nav{gap:2rem}
+  .header-nav a{font-size:.88rem}
+  .header-cta{font-size:.85rem;padding:.55rem 1.6rem}
+
+  /* Hero */
+  .hero-logo{max-width:720px}
+  .hero-theme{max-width:700px}
+  .htag{font-size:.85rem;padding:.35rem .9rem}
+  .hero-badges-row{gap:.8rem}
+  .hero-orca{width:clamp(100px,12vw,150px);bottom:80px}
+
+  /* Benefits */
+  .bene-grid{grid-template-columns:repeat(3,1fr);gap:2rem}
+  .bene{padding:2.8rem 2rem}
+  .bene h3{font-size:1.1rem}
+
+  /* Overview + NORDT */
+  .info-table{max-width:780px}
+  .info-row dt{flex:0 0 160px;font-size:.92rem}
+  .info-row dd{font-size:.95rem}
+  .nordt{max-width:860px}
+  .nordt-card{padding:1.3rem 2rem}
+  .nordt-hero{padding:2.5rem}
+  .nordt-main-copy{font-size:1.8rem}
+
+  /* Movie */
+  .movie-wrap{max-width:800px}
+
+  /* Schedule */
+  .sched-flow{max-width:780px}
+
+  /* Diagnosis */
+  .type-pair{max-width:780px;gap:1.5rem}
+  .type-solo,.secret-card{max-width:780px}
+  .diag-chars-img{max-width:640px}
+  .type-card{padding:1.2rem 1.2rem 1.4rem}
+  .type-card-char{width:clamp(120px,50%,170px)}
+  .type-catch{font-size:.88rem}
+
+  /* CTA with orca */
+  .cta-with-orca{gap:2rem}
+  .cta-orca{width:clamp(100px,10vw,130px)}
+
+  /* Flow */
+  .steps{max-width:700px;margin:0 auto}
+  .step{padding:1rem 1.5rem}
+
+  /* Safety */
+  .safe-grid{gap:2rem}
+  .safe{padding:2rem 1.6rem}
+  .safe h3{font-size:1.05rem}
+  .safe-hero{padding:2.5rem;margin-bottom:3rem}
+
+  /* Organizer */
+  .org-grid{gap:2.5rem}
+  .org-card{padding:2.5rem 2rem}
+
+  /* FAQ */
+  .faq-list{max-width:820px}
+  .faq{padding-bottom:1.5rem}
+  .faq-q{font-size:1.08rem}
+  .faq p{font-size:.95rem}
+
+  /* Final CTA */
+  .final-logo{max-width:560px}
+  .final-catch{font-size:2.2rem}
+
+  /* Footer */
+  .ft{padding:2.5rem 0}
+}
 </style>

@@ -258,3 +258,23 @@ a:hover {
     clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 100%)
   }
 }
+
+/* ── Desktop optimization (1024px+) ── */
+@media(min-width:1024px) {
+  :root {
+    --section-py: clamp(6rem, 10vw, 9rem);
+  }
+
+  .sec-heading {
+    margin-bottom: 3.8rem;
+  }
+
+  .cta-btn {
+    font-size: 1.5rem;
+    padding: 1.25rem 3.6rem;
+  }
+
+  .cta-btn--lg {
+    padding: 1.4rem 4.5rem;
+  }
+}
