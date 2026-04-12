@@ -122,24 +122,7 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S2.5  昨年の大会動画
-  ============================================================ -->
-<section class="sec sec--tinted" id="movie">
-  <div class="container">
-    <h2 class="sec-heading rv">昨年の<span class="pop">バトルを見る</span></h2>
-    <div class="movie-wrap rv">
-      <div class="movie-placeholder">
-        <span class="movie-play-icon">▶</span>
-        <p>大会ダイジェスト映像（準備中）</p>
-      </div>
-    </div>
-    <p class="movie-caption rv">2025年大会では、小学生から中学生まで多くのチームが「自分だけの提案」をぶつけ合いました。<br>3分間のプレゼンに込められた熱量と、審査員が本気でうなずく瞬間をご覧ください。</p>
-  </div>
-</section>
-
-
-<!-- ============================================================
-  S2.75  プレゼンテーマ（独立セクション）
+  S2.5  プレゼンテーマ（独立セクション）
   ============================================================ -->
 <section class="sec theme-sec" id="theme">
   <div class="container">
@@ -192,6 +175,23 @@ import '../styles/global.css';
         <div class="nordt-card rv" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><div><strong>Talk</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div></div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  S3.25  昨年の大会動画
+  ============================================================ -->
+<section class="sec sec--white" id="movie">
+  <div class="container">
+    <h2 class="sec-heading rv">昨年の<span class="pop">バトルを見る</span></h2>
+    <div class="movie-wrap rv">
+      <div class="movie-placeholder">
+        <span class="movie-play-icon">▶</span>
+        <p>大会ダイジェスト映像（準備中）</p>
+      </div>
+    </div>
+    <p class="movie-caption rv">2025年大会では、小学生から中学生まで多くのチームが「自分だけの提案」をぶつけ合いました。<br>3分間のプレゼンに込められた熱量と、審査員が本気でうなずく瞬間をご覧ください。</p>
   </div>
 </section>
 
@@ -478,12 +478,6 @@ import '../styles/global.css';
   </div>
 </div>
 
-<!-- TikTokフォロー誘導 -->
-<div class="cta-wrap rv" style="padding:1.5rem 1rem">
-  <p class="cta-sub">📱 プレゼンテーションラボラトリーのTikTokをフォローしよう！</p>
-  <a href="https://www.tiktok.com/@prelabo?_r=1&_t=ZS-94tLesYEsNs" class="cta-btn" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#25F4EE,#FE2C55);box-shadow:0 4px 16px rgba(254,44,85,.3)">TikTokをフォローする</a>
-</div>
-
 <div class="stripe"></div>
 
 
@@ -602,6 +596,7 @@ import '../styles/global.css';
       <span class="ft-x">&times;</span>
       <a href="https://kids.valed.jp/" target="_blank" rel="noopener noreferrer"><img src={`${import.meta.env.BASE_URL}images/valed-logo.png`} alt="バレッドキッズ" /></a>
     </div>
+    <p class="ft-social"><a href="https://www.tiktok.com/@prelabo?_r=1&_t=ZS-94tLesYEsNs" target="_blank" rel="noopener noreferrer" class="ft-tiktok">TikTok @prelabo</a></p>
     <p>&copy; 2026 小川探究 &times; バレッドキッズ All Rights Reserved.</p>
   </div>
 </footer>
@@ -1421,5 +1416,8 @@ import '../styles/global.css';
 .ft-logos{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.8rem}
 .ft-logos img{height:28px;width:auto;opacity:.45;transition:opacity .2s}
 .ft-logos a:hover img{opacity:.7}
+.ft-social{margin-bottom:.6rem}
+.ft-tiktok{color:var(--c-text-muted);font-size:.82rem;text-decoration:none;transition:color .2s}
+.ft-tiktok:hover{color:var(--c-text-mid)}
 .ft-x{font-weight:700;color:var(--c-text-muted);font-size:.9rem}
 </style>
