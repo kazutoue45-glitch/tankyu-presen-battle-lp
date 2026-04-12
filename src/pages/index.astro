@@ -33,33 +33,12 @@ import '../styles/global.css';
   S1  ファーストビュー — リッチ×ポップ / 大会ロゴ準拠
   ============================================================ -->
 <section class="hero">
-  <!-- 背景グラデーション上のスポットライト -->
-  <div class="hero-spotlight" aria-hidden="true"></div>
-
-  <!-- ステージ照明ビーム（上から差し込む光） -->
-  <div class="hero-beams" aria-hidden="true">
-    <div class="beam beam--1"></div>
-    <div class="beam beam--2"></div>
-    <div class="beam beam--3"></div>
-    <div class="beam beam--4"></div>
-    <div class="beam beam--5"></div>
-  </div>
-
-  <!-- 紙吹雪（NORDT5色） -->
-  <div class="hero-confetti-layer" aria-hidden="true">
-    <span class="confetti confetti--1"></span>
-    <span class="confetti confetti--2"></span>
-    <span class="confetti confetti--3"></span>
-    <span class="confetti confetti--4"></span>
-    <span class="confetti confetti--5"></span>
-    <span class="confetti confetti--6"></span>
-    <span class="confetti confetti--7"></span>
-    <span class="confetti confetti--8"></span>
-    <span class="confetti confetti--9"></span>
-    <span class="confetti confetti--10"></span>
-  </div>
-
-  <!-- 光の粒子 -->
+  <!-- 太陽光 -->
+  <div class="hero-sun" aria-hidden="true"></div>
+  <!-- プリズム光（虹） -->
+  <div class="hero-prism hero-prism--1" aria-hidden="true"></div>
+  <div class="hero-prism hero-prism--2" aria-hidden="true"></div>
+  <!-- 光の粒子（太陽の光） -->
   <div class="hero-particles" aria-hidden="true">
     <span class="particle particle--1"></span>
     <span class="particle particle--2"></span>
@@ -67,17 +46,28 @@ import '../styles/global.css';
     <span class="particle particle--4"></span>
     <span class="particle particle--5"></span>
     <span class="particle particle--6"></span>
-    <span class="particle particle--7"></span>
-    <span class="particle particle--8"></span>
+  </div>
+  <!-- 草原 -->
+  <div class="hero-grass" aria-hidden="true">
+    <div class="grass-blade grass-blade--1"></div>
+    <div class="grass-blade grass-blade--2"></div>
+    <div class="grass-blade grass-blade--3"></div>
+    <div class="grass-blade grass-blade--4"></div>
+    <div class="grass-blade grass-blade--5"></div>
+    <div class="grass-blade grass-blade--6"></div>
+    <div class="grass-blade grass-blade--7"></div>
+    <div class="grass-blade grass-blade--8"></div>
+  </div>
+  <!-- 風に舞う草の葉 -->
+  <div class="hero-leaves" aria-hidden="true">
+    <span class="leaf leaf--1"></span>
+    <span class="leaf leaf--2"></span>
+    <span class="leaf leaf--3"></span>
+    <span class="leaf leaf--4"></span>
+    <span class="leaf leaf--5"></span>
   </div>
 
-  <!-- レンズフレア -->
-  <div class="hero-flare hero-flare--1" aria-hidden="true"></div>
-  <div class="hero-flare hero-flare--2" aria-hidden="true"></div>
-
   <div class="hero-inner">
-    <!-- ロゴの背後の放射光 -->
-    <div class="hero-radial" aria-hidden="true"></div>
     <!-- 大会ロゴ -->
     <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="hero-logo" />
 
@@ -719,166 +709,111 @@ import '../styles/global.css';
   .header-burger{display:block;z-index:101}
 }
 
-/* ─────────── S1 HERO — イラスト背景 + スポットライト ─────────── */
+/* ─────────── S1 HERO — 青空・太陽・プリズム・草原 ─────────── */
 .hero{
   position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;
   text-align:center;overflow:hidden;
-  background:linear-gradient(135deg,#0d0820 0%,#0a1a3a 30%,#101830 50%,#1a0d30 70%,#0d0820 100%);
-  color:#fff;
+  background:linear-gradient(180deg,#1a6dd4 0%,#4a9ae8 25%,#7ec8f0 50%,#b8e4f8 70%,#e0f4e8 88%,#5a9a40 93%,#3d7a2a 100%);
+  color:var(--c-text);
 }
 
-/* ─── 背景レイヤー ─── */
-.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hero-bg-img{
-  width:100%;height:100%;object-fit:cover;object-position:center 55%;
+/* 太陽 */
+.hero-sun{
+  position:absolute;top:5%;right:12%;z-index:1;pointer-events:none;
+  width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,#fff 0%,rgba(255,240,180,.9) 30%,rgba(255,200,50,.4) 60%,transparent 80%);
+  box-shadow:0 0 60px 30px rgba(255,220,100,.5),0 0 120px 60px rgba(255,200,50,.25),0 0 200px 100px rgba(255,180,0,.1);
+  animation:sunPulse 6s ease-in-out infinite;
 }
+@keyframes sunPulse{0%,100%{transform:scale(1);box-shadow:0 0 60px 30px rgba(255,220,100,.5),0 0 120px 60px rgba(255,200,50,.25)}50%{transform:scale(1.1);box-shadow:0 0 80px 40px rgba(255,220,100,.6),0 0 160px 80px rgba(255,200,50,.3)}}
 
-/* 暗いオーバーレイ */
-.hero-overlay{
-  position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:rgba(10,18,42,.4);
+/* プリズム（虹の光） */
+.hero-prism{position:absolute;pointer-events:none;z-index:1;border-radius:50%;opacity:.5}
+.hero-prism--1{
+  width:500px;height:500px;top:-5%;right:-8%;
+  background:conic-gradient(from 200deg,
+    rgba(208,72,62,.2),rgba(245,166,35,.2),rgba(255,230,50,.15),
+    rgba(76,175,80,.2),rgba(74,144,217,.2),rgba(155,81,224,.2),
+    transparent 50%);
+  animation:prismRotate 20s linear infinite;
 }
+.hero-prism--2{
+  width:400px;height:400px;top:10%;left:-5%;
+  background:conic-gradient(from 40deg,
+    rgba(155,81,224,.15),rgba(74,144,217,.15),rgba(76,175,80,.12),
+    rgba(245,166,35,.15),rgba(208,72,62,.12),
+    transparent 45%);
+  animation:prismRotate 25s linear infinite reverse;
+}
+@keyframes prismRotate{to{transform:rotate(360deg)}}
 
-/* ステージ照明ビーム — 強い光 */
-.hero-beams{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
-.beam{
-  position:absolute;top:0;
-  transform-origin:top center;
-  pointer-events:none;
-}
-.beam--1{
-  left:8%;width:180px;height:110vh;
-  background:linear-gradient(180deg,rgba(155,81,224,.9) 0%,rgba(155,81,224,.3) 30%,rgba(155,81,224,.05) 60%,transparent 85%);
-  clip-path:polygon(40% 0%,60% 0%,100% 100%,0% 100%);
-  animation:beamSway1 6s ease-in-out infinite;
-}
-.beam--2{
-  left:28%;width:200px;height:110vh;
-  background:linear-gradient(180deg,rgba(76,175,80,.85) 0%,rgba(76,175,80,.25) 30%,rgba(76,175,80,.05) 60%,transparent 85%);
-  clip-path:polygon(42% 0%,58% 0%,100% 100%,0% 100%);
-  animation:beamSway2 8s ease-in-out infinite;
-}
-.beam--3{
-  left:50%;margin-left:-130px;width:260px;height:110vh;
-  background:linear-gradient(180deg,rgba(245,166,35,.95) 0%,rgba(245,166,35,.35) 25%,rgba(245,166,35,.08) 55%,transparent 80%);
-  clip-path:polygon(42% 0%,58% 0%,100% 100%,0% 100%);
-  animation:beamSway3 7s ease-in-out infinite;
-}
-.beam--4{
-  right:25%;width:190px;height:110vh;
-  background:linear-gradient(180deg,rgba(74,144,217,.9) 0%,rgba(74,144,217,.3) 30%,rgba(74,144,217,.05) 60%,transparent 85%);
-  clip-path:polygon(40% 0%,60% 0%,100% 100%,0% 100%);
-  animation:beamSway4 9s ease-in-out infinite;
-}
-.beam--5{
-  right:5%;width:170px;height:110vh;
-  background:linear-gradient(180deg,rgba(208,72,62,.85) 0%,rgba(208,72,62,.25) 30%,rgba(208,72,62,.05) 60%,transparent 85%);
-  clip-path:polygon(42% 0%,58% 0%,100% 100%,0% 100%);
-  animation:beamSway5 7.5s ease-in-out infinite;
-}
-@keyframes beamSway1{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-@keyframes beamSway2{0%,100%{transform:rotate(3deg)}50%{transform:rotate(-5deg)}}
-@keyframes beamSway3{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
-@keyframes beamSway4{0%,100%{transform:rotate(5deg)}50%{transform:rotate(-3deg)}}
-@keyframes beamSway5{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(5deg)}}
-
-/* ビーム根元のスポット光源 */
-.beam::before{
-  content:'';position:absolute;top:-15px;left:50%;transform:translateX(-50%);
-  width:20px;height:20px;border-radius:50%;
-  background:#fff;
-  box-shadow:0 0 30px 15px rgba(255,255,255,.6),0 0 60px 30px rgba(255,255,255,.2);
-}
-
-/* スポットライトエフェクト — 強化版 */
-.hero-spotlight{
-  position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:
-    radial-gradient(ellipse 60% 80% at 50% 20%, rgba(245,166,35,.35) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 65% at 20% 40%, rgba(155,81,224,.3) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 65% at 80% 45%, rgba(74,144,217,.28) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 55% at 50% 85%, rgba(76,175,80,.2) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 50% at 90% 20%, rgba(208,72,62,.18) 0%, transparent 50%),
-    radial-gradient(ellipse 70% 70% at 50% 50%, rgba(255,255,255,.06) 0%, transparent 70%);
-}
-
-/* 光の粒子 */
-.hero-particles{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
+/* 光の粒子（太陽光のちり） */
+.hero-particles{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
 .particle{
   position:absolute;border-radius:50%;
-  background:rgba(255,255,255,.9);
-  box-shadow:0 0 6px rgba(255,255,255,.5);
-  animation:particleFloat 8s ease-in-out infinite;
+  background:rgba(255,255,220,.8);
+  box-shadow:0 0 4px rgba(255,255,200,.6);
+  animation:dustFloat 10s ease-in-out infinite;
 }
-.particle--1{width:4px;height:4px;top:15%;left:10%;animation-delay:0s;animation-duration:7s}
-.particle--2{width:6px;height:6px;top:25%;left:80%;animation-delay:1s;animation-duration:9s}
-.particle--3{width:3px;height:3px;top:50%;left:20%;animation-delay:2s;animation-duration:6s}
-.particle--4{width:5px;height:5px;top:60%;left:70%;animation-delay:3s;animation-duration:8s}
-.particle--5{width:4px;height:4px;top:35%;left:50%;animation-delay:4s;animation-duration:10s}
-.particle--6{width:3px;height:3px;top:70%;left:35%;animation-delay:1.5s;animation-duration:7.5s}
-.particle--7{width:5px;height:5px;top:20%;left:60%;animation-delay:2.5s;animation-duration:9.5s}
-.particle--8{width:4px;height:4px;top:80%;left:85%;animation-delay:3.5s;animation-duration:6.5s}
-@keyframes particleFloat{
-  0%,100%{transform:translateY(0) scale(1);opacity:.4}
-  25%{transform:translateY(-30px) scale(1.5);opacity:.8}
-  50%{transform:translateY(-15px) scale(1);opacity:.6}
-  75%{transform:translateY(-40px) scale(1.3);opacity:.9}
+.particle--1{width:3px;height:3px;top:20%;left:15%;animation-delay:0s}
+.particle--2{width:4px;height:4px;top:15%;left:65%;animation-delay:2s}
+.particle--3{width:2px;height:2px;top:35%;left:30%;animation-delay:4s}
+.particle--4{width:3px;height:3px;top:25%;left:80%;animation-delay:1s}
+.particle--5{width:4px;height:4px;top:40%;left:50%;animation-delay:3s}
+.particle--6{width:2px;height:2px;top:10%;left:45%;animation-delay:5s}
+@keyframes dustFloat{
+  0%,100%{transform:translate(0,0);opacity:.3}
+  25%{transform:translate(15px,-20px);opacity:.8}
+  50%{transform:translate(-10px,-10px);opacity:.5}
+  75%{transform:translate(20px,-30px);opacity:.9}
 }
 
-/* レンズフレア */
-.hero-flare{position:absolute;border-radius:50%;pointer-events:none;z-index:4}
-.hero-flare--1{
-  width:350px;height:350px;top:3%;right:8%;
-  background:radial-gradient(circle,rgba(255,215,0,.35) 0%,rgba(245,166,35,.15) 40%,transparent 70%);
-  animation:flarePulse 4s ease-in-out infinite;
+/* 草原（下部） */
+.hero-grass{
+  position:absolute;bottom:0;left:0;right:0;height:12vh;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,transparent 0%,rgba(60,130,40,.3) 40%,rgba(50,110,30,.6) 70%,#3a7a28 100%);
 }
-.hero-flare--2{
-  width:300px;height:300px;top:10%;left:5%;
-  background:radial-gradient(circle,rgba(155,81,224,.28) 0%,rgba(74,144,217,.12) 40%,transparent 70%);
-  animation:flarePulse 5s ease-in-out infinite 1.5s;
+.grass-blade{
+  position:absolute;bottom:0;
+  width:3px;border-radius:2px 2px 0 0;
+  background:linear-gradient(180deg,#6abf45,#3d8a2a);
+  transform-origin:bottom center;
+  animation:grassSway 3s ease-in-out infinite;
 }
-@keyframes flarePulse{
-  0%,100%{transform:scale(1);opacity:.6}
-  50%{transform:scale(1.3);opacity:1}
-}
-
-/* 紙吹雪（NORDTカラー） */
-.hero-confetti-layer{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden}
-.confetti{
-  position:absolute;width:10px;height:14px;
-  opacity:.85;
-  animation:confettiRain 7s linear infinite;
-}
-.confetti--1{left:5%;background:var(--nordt-n);animation-delay:0s;border-radius:2px;transform:rotate(15deg)}
-.confetti--2{left:15%;background:var(--nordt-o);animation-delay:.8s;width:8px;height:8px;border-radius:50%}
-.confetti--3{left:28%;background:var(--nordt-r);animation-delay:1.5s;border-radius:1px;transform:rotate(-20deg)}
-.confetti--4{left:40%;background:var(--nordt-d);animation-delay:2.2s;width:12px;height:6px;border-radius:3px}
-.confetti--5{left:55%;background:var(--nordt-t);animation-delay:3s;transform:rotate(45deg)}
-.confetti--6{left:65%;background:var(--nordt-n);animation-delay:.5s;width:6px;height:12px;border-radius:50%}
-.confetti--7{left:75%;background:var(--nordt-o);animation-delay:1.8s;transform:rotate(-35deg)}
-.confetti--8{left:85%;background:var(--nordt-r);animation-delay:2.8s;width:8px;height:8px;border-radius:50%}
-.confetti--9{left:92%;background:var(--nordt-d);animation-delay:4s;transform:rotate(60deg)}
-.confetti--10{left:48%;background:var(--nordt-t);animation-delay:3.5s;width:7px;height:10px;border-radius:2px}
-@keyframes confettiRain{
-  0%{top:-5%;opacity:.8;transform:translateX(0) rotate(0deg)}
-  100%{top:105%;opacity:0;transform:translateX(30px) rotate(720deg)}
+.grass-blade--1{left:5%;height:50px;animation-delay:0s;animation-duration:2.8s}
+.grass-blade--2{left:12%;height:60px;animation-delay:.3s;animation-duration:3.2s;width:4px}
+.grass-blade--3{left:22%;height:45px;animation-delay:.6s;animation-duration:2.5s}
+.grass-blade--4{left:35%;height:55px;animation-delay:.1s;animation-duration:3s;width:4px}
+.grass-blade--5{left:50%;height:48px;animation-delay:.8s;animation-duration:2.7s}
+.grass-blade--6{left:65%;height:58px;animation-delay:.4s;animation-duration:3.1s;width:4px}
+.grass-blade--7{left:78%;height:42px;animation-delay:.7s;animation-duration:2.6s}
+.grass-blade--8{left:90%;height:52px;animation-delay:.2s;animation-duration:3.3s;width:4px}
+@keyframes grassSway{
+  0%,100%{transform:rotate(-8deg)}
+  50%{transform:rotate(8deg)}
 }
 
-/* ロゴ背後の放射光 */
-.hero-radial{
-  position:absolute;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  width:min(800px,90vw);height:min(800px,90vw);
-  background:conic-gradient(
-    from 0deg,
-    rgba(155,81,224,.08),rgba(76,175,80,.06),rgba(74,144,217,.08),
-    rgba(245,166,35,.06),rgba(208,72,62,.08),rgba(155,81,224,.06)
-  );
+/* 風に舞う草の葉 */
+.hero-leaves{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+.leaf{
+  position:absolute;
+  width:20px;height:6px;
+  background:#5ab040;
   border-radius:50%;
-  animation:radialSpin 30s linear infinite;
-  pointer-events:none;
+  opacity:.7;
+  animation:leafBlow 8s ease-in-out infinite;
 }
-@keyframes radialSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.leaf--1{bottom:15%;left:-5%;animation-delay:0s;animation-duration:7s;background:#6abf45}
+.leaf--2{bottom:25%;left:-8%;animation-delay:1.5s;animation-duration:9s;width:15px;height:5px;background:#4a9a30}
+.leaf--3{bottom:10%;left:-3%;animation-delay:3s;animation-duration:6s;width:18px;background:#7cd060}
+.leaf--4{bottom:30%;left:-6%;animation-delay:4.5s;animation-duration:8s;width:12px;height:4px}
+.leaf--5{bottom:20%;left:-4%;animation-delay:2s;animation-duration:10s;width:16px;background:#58a838}
+@keyframes leafBlow{
+  0%{transform:translate(0,0) rotate(0deg);opacity:0}
+  10%{opacity:.7}
+  80%{opacity:.5}
+  100%{transform:translate(110vw,-100px) rotate(720deg);opacity:0}
+}
 
 /* ─── メインコンテンツ ─── */
 .hero-inner{
@@ -896,7 +831,7 @@ import '../styles/global.css';
 .hero-logo{
   display:block;width:100%;max-width:720px;
   margin:0 auto .8rem;
-  filter:drop-shadow(0 4px 24px rgba(0,0,0,.4)) drop-shadow(0 0 50px rgba(245,166,35,.35)) drop-shadow(0 0 80px rgba(155,81,224,.15));
+  filter:drop-shadow(0 6px 24px rgba(0,0,0,.15)) drop-shadow(0 0 30px rgba(255,255,255,.3));
   animation:logoDrop .8s .15s cubic-bezier(.22,1,.36,1) both;
 }
 @keyframes logoDrop{0%{opacity:0;transform:scale(.6) translateY(-50px) rotate(-2deg)}100%{opacity:1;transform:scale(1) translateY(0) rotate(0deg)}}
@@ -909,12 +844,12 @@ import '../styles/global.css';
   max-width:600px;
   margin:0 auto clamp(1.5rem,4vw,2.5rem);
   padding:.8rem 1.5rem;
-  background:rgba(0,0,0,.35);
+  background:rgba(255,255,255,.75);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border:3px solid var(--c-orange);
   border-radius:var(--radius-md);
-  box-shadow:0 4px 24px rgba(245,166,35,.15),inset 0 0 20px rgba(255,215,0,.08);
-  color:#fff;
+  box-shadow:0 4px 24px rgba(0,0,0,.1);
+  color:var(--c-text);
   position:relative;
   animation:slam .65s .35s cubic-bezier(.22,1,.36,1) both;
 }
@@ -943,10 +878,10 @@ import '../styles/global.css';
   animation:popIn .5s cubic-bezier(.22,1,.36,1) both;
   white-space:nowrap;
 }
-.htag--purple,.htag--green,.htag--blue,.htag--orange{
-  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;
-  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-}
+.htag--purple{background:var(--nordt-n);border-color:var(--nordt-n);color:#fff}
+.htag--green{background:var(--c-green);border-color:var(--c-green);color:#fff}
+.htag--blue{background:var(--c-blue);border-color:var(--c-blue);color:#fff}
+.htag--orange{background:var(--c-orange);border-color:var(--c-orange);color:#fff}
 @keyframes popIn{0%{opacity:0;transform:scale(.5) translateY(15px)}100%{opacity:1;transform:scale(1) translateY(0)}}
 
 /* ─── キャラクター集合 ─── */
@@ -995,7 +930,7 @@ import '../styles/global.css';
 }
 .hero-scroll-arrow{
   display:block;width:24px;height:24px;
-  border-right:3px solid rgba(255,255,255,.7);border-bottom:3px solid rgba(255,255,255,.7);
+  border-right:3px solid rgba(255,255,255,.8);border-bottom:3px solid rgba(255,255,255,.8);
   transform:rotate(45deg);opacity:.4;
   animation:scrollBounce 1.5s ease-in-out infinite;
 }
