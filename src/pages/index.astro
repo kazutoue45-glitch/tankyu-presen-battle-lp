@@ -113,6 +113,7 @@ import '../styles/global.css';
         <div class="bene-badge" style="background:var(--nordt-n)">🎬</div>
         <h3>プレゼンの映像授業<br>「プレゼンマスターズ」を特別価格で受講できる</h3>
         <p>プロが教えるプレゼンの映像授業「プレゼンマスターズ」を、大会参加者限定の特別価格で受講できます。大会前の準備にも、大会後のさらなるスキルアップにも活用できます。</p>
+        <p class="bene-price">通常価格 <s>2,200円</s> → <strong>特別価格 1,000円</strong>（税込）</p>
       </article>
     </div>
   </div>
@@ -145,6 +146,8 @@ import '../styles/global.css';
         <div class="info-row"><dt>💻 開催形式</dt><dd><strong>オンライン開催</strong></dd></div>
         <div class="info-row"><dt>👥 審査員</dt><dd>教育者・ビジネスパーソンなどの大人が<strong>本気で聞く</strong></dd></div>
         <div class="info-row"><dt>🎓 対象</dt><dd>小学生〜高校生</dd></div>
+        <div class="info-row"><dt>👥 チーム</dt><dd><strong>1〜4名</strong>のチームでエントリー</dd></div>
+        <div class="info-row"><dt>📋 定員</dt><dd><strong>1,000チーム</strong></dd></div>
         <div class="info-row"><dt>💰 参加費</dt><dd class="info-free">無料</dd></div>
       </dl>
     </div>
@@ -159,7 +162,7 @@ import '../styles/global.css';
       </h3>
 
       <div class="nordt-hero rv">
-        <p class="nordt-main-copy">100人が納得するニーズに、<br>1人しか持てないオリジナリティを。</p>
+        <p class="nordt-main-copy">100人が納得するニーズに、<br>1人しか持てないオリジナルを。</p>
         <p class="nordt-sub-copy">「みんなが本当に困っていること」をちゃんと見つける力。<br>そこに、自分にしか思いつかないアイデアで切り込む力。<br>この2つが重なったとき、キミだけの「最強の提案」が生まれる。<br>審査員はそれを楽しみにしています。</p>
       </div>
 
@@ -209,7 +212,7 @@ import '../styles/global.css';
           <span class="sched-date">8/21 〜 9/19</span>
         </div>
         <h3 class="sched-title">一次選考（動画審査）</h3>
-        <p class="sched-desc">提出された動画をNORDT基準で審査。9/20に通過チームを発表。</p>
+        <p class="sched-desc">提出された動画をNORDT基準で審査。9/20に通過チームを発表。通過率10％。</p>
       </div>
 
       <!-- コネクタ矢印 -->
@@ -225,7 +228,7 @@ import '../styles/global.css';
           <span class="sched-date">10/1 〜 10/19</span>
         </div>
         <h3 class="sched-title">二次選考（Zoomプレゼン）</h3>
-        <p class="sched-desc">通過チームがZoomでライブプレゼン。審査を経て10/20に結果発表。</p>
+        <p class="sched-desc">通過チームはZoom枠（1チーム7分）を選択。動画視聴3分、質疑応答3分の審査を経て10/20に結果発表。通過率10％。</p>
       </div>
 
       <!-- コネクタ矢印 -->
@@ -241,7 +244,7 @@ import '../styles/global.css';
           <span class="sched-date">10/21 〜 11/15</span>
         </div>
         <h3 class="sched-title">個別レクチャー</h3>
-        <p class="sched-desc">決勝進出10チームに、プレゼンのプロがオンラインでマンツーマン指導。</p>
+        <p class="sched-desc">決勝進出10チームに、プレゼンのプロがオンラインでマンツーマン指導。参加無料。</p>
       </div>
 
       <!-- コネクタ矢印 -->
@@ -257,7 +260,7 @@ import '../styles/global.css';
           <span class="sched-date">11/22（日）</span>
         </div>
         <h3 class="sched-title">🏆 オンライン決勝</h3>
-        <p class="sched-desc">ファイナリスト10チームが最高のプレゼンを披露。優勝チームが決定！</p>
+        <p class="sched-desc">ファイナリスト10チームが最高のプレゼンを披露。優勝チームが決定！ 12:30〜16:00予定。</p>
       </div>
 
     </div>
@@ -410,7 +413,7 @@ import '../styles/global.css';
             <img src={`${import.meta.env.BASE_URL}images/type-pioneer-no.png`} alt="" class="type-card-char" aria-hidden="true" />
             <div class="type-card-info">
               <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b></span>
-              <p class="type-catch">得意を活かして新しい価値を生む発明家</p>
+              <p class="type-catch">得意を活かして新しい価値を生む開発者</p>
               <p class="type-jobs">アプリ開発・ゲームクリエイター・企画職</p>
             </div>
           </div>
@@ -442,19 +445,25 @@ import '../styles/global.css';
 
     </div>
 
-    <p class="diag-bottom-note rv">参加するだけで届く。勝っても負けても、全員がもらえる「キミだけの診断シート」です。</p>
   </div>
 </section>
 
-<!-- CTA① -->
+<!-- CTA① + セルフ診断 -->
 <div class="cta-wrap cta-wrap--pop rv">
   <div class="cta-with-orca">
     <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="" class="cta-orca" aria-hidden="true" />
     <div>
       <p class="cta-sub"><strong>キミのプレゼンタイプ、知りたくない？</strong></p>
-      <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
+      <p class="cta-sub">「12診断」たった1分でセルフチェックできます。</p>
+      <a href="https://detection-ogawa.web.app" class="cta-btn" target="_blank" rel="noopener noreferrer">プレゼンタイプを診断する</a>
     </div>
   </div>
+</div>
+
+<!-- TikTokフォロー誘導 -->
+<div class="cta-wrap rv" style="padding:1.5rem 1rem">
+  <p class="cta-sub">📱 プレゼンテーションラボラトリーのTikTokをフォローしよう！</p>
+  <a href="https://www.tiktok.com/@prelabo?_r=1&_t=ZS-94tLesYEsNs" class="cta-btn" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(135deg,#25F4EE,#FE2C55);box-shadow:0 4px 16px rgba(254,44,85,.3)">TikTokをフォローする</a>
 </div>
 
 <div class="stripe"></div>
@@ -542,8 +551,7 @@ import '../styles/global.css';
       <div class="faq rv"><h3 class="faq-q">テーマは何ですか？</h3><p>「あなたの街の１０年後！―地域活性化を提案せよ―」です。このテーマに沿って準備を進めましょう。</p></div>
       <div class="faq rv"><h3 class="faq-q">小学生の低学年でも参加できますか？</h3><p>小学生〜高校生が対象です。学年ではなく「課題を解決したい」という気持ちがあれば、どなたでも参加できます。</p></div>
       <div class="faq rv"><h3 class="faq-q">当日は保護者の同席が必要ですか？</h3><p>オンライン開催のため、ご自宅から参加できます。保護者の方の同席は自由ですが、必須ではありません。</p></div>
-      <div class="faq rv"><h3 class="faq-q">プレゼンタイプ診断はいつ届きますか？</h3><p>大会終了後1週間以内に、全員にお届けします。</p></div>
-      <div class="faq rv"><h3 class="faq-q">プレゼンの準備は何をすればいいですか？</h3><p>テーマに対して「課題をどう解決するか」を考え、スライドを作って発表の準備をしましょう。スライドは必須です。</p></div>
+      <div class="faq rv"><h3 class="faq-q">プレゼンの準備は何をすればいいですか？</h3><p>テーマに対して「課題をどう解決するか」を考え、スライドを作って発表の準備をしましょう。スライドは必須です。有料ですが映像授業（特別価格1,000円、税込）もございます。</p></div>
       <div class="faq rv"><h3 class="faq-q">生成AI（ChatGPTなど）を使ってもいいですか？</h3><p>使ってOKです。ただし、AIの出力をそのまま使っても「いい提案」にはなりません。オリジナリティのないプレゼンはNORDTの評価で厳しくなるので、あくまで自分の考えをベースにしましょう。</p></div>
     </div>
   </div>
@@ -873,6 +881,8 @@ import '../styles/global.css';
 .bene-badge{width:56px;height:56px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1rem;color:#fff}
 .bene h3{font-family:var(--f-heading);font-size:1.05rem;font-weight:900;margin-bottom:.8rem;line-height:1.55}
 .bene p{font-size:.88rem;color:var(--c-text-light);line-height:1.85;text-align:left}
+.bene-price{font-family:var(--f-heading);font-size:.95rem;font-weight:700;color:var(--c-red);margin-top:.8rem;text-align:center}
+.bene-price s{color:var(--c-text-muted);font-weight:400}
 
 
 /* ─────────── S2.5 THEME ─────────── */
