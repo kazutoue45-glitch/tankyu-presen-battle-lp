@@ -33,8 +33,17 @@ import '../styles/global.css';
   S1  ファーストビュー — リッチ×ポップ / 大会ロゴ準拠
   ============================================================ -->
 <section class="hero">
-  <!-- 背景 -->
+  <!-- 背景グラデーション上のスポットライト -->
   <div class="hero-spotlight" aria-hidden="true"></div>
+
+  <!-- ステージ照明ビーム（上から差し込む光） -->
+  <div class="hero-beams" aria-hidden="true">
+    <div class="beam beam--1"></div>
+    <div class="beam beam--2"></div>
+    <div class="beam beam--3"></div>
+    <div class="beam beam--4"></div>
+    <div class="beam beam--5"></div>
+  </div>
 
   <!-- 紙吹雪（NORDT5色） -->
   <div class="hero-confetti-layer" aria-hidden="true">
@@ -728,6 +737,27 @@ import '../styles/global.css';
 .hero-overlay{
   position:absolute;inset:0;z-index:0;pointer-events:none;
   background:rgba(10,18,42,.4);
+}
+
+/* ステージ照明ビーム */
+.hero-beams{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.beam{
+  position:absolute;top:-10%;
+  width:0;height:0;
+  border-left:60px solid transparent;
+  border-right:60px solid transparent;
+  border-top:120vh solid transparent;
+  opacity:.06;
+  animation:beamSway 8s ease-in-out infinite;
+}
+.beam--1{left:10%;border-top-color:var(--nordt-n);animation-delay:0s;animation-duration:7s;border-left-width:50px;border-right-width:50px}
+.beam--2{left:30%;border-top-color:var(--nordt-o);animation-delay:1.5s;animation-duration:9s;border-left-width:70px;border-right-width:70px}
+.beam--3{left:50%;transform:translateX(-50%);border-top-color:var(--nordt-d);animation-delay:.5s;animation-duration:8s;border-left-width:80px;border-right-width:80px;opacity:.08}
+.beam--4{right:30%;border-top-color:var(--nordt-r);animation-delay:2s;animation-duration:10s;border-left-width:65px;border-right-width:65px}
+.beam--5{right:8%;border-top-color:var(--nordt-t);animation-delay:3s;animation-duration:7.5s;border-left-width:55px;border-right-width:55px}
+@keyframes beamSway{
+  0%,100%{transform:rotate(-3deg);opacity:.05}
+  50%{transform:rotate(3deg);opacity:.1}
 }
 
 /* スポットライトエフェクト — 強化版 */
