@@ -15,6 +15,7 @@ import '../styles/global.css';
     </a>
     <nav class="header-nav" id="header-nav">
       <a href="#benefits">参加メリット</a>
+      <a href="#movie">大会動画</a>
       <a href="#overview">大会概要</a>
       <a href="#schedule">スケジュール</a>
       <a href="#diagnosis">タイプ診断</a>
@@ -121,7 +122,24 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S2.5  プレゼンテーマ（独立セクション）
+  S2.5  昨年の大会動画
+  ============================================================ -->
+<section class="sec sec--tinted" id="movie">
+  <div class="container">
+    <h2 class="sec-heading rv">昨年の<span class="pop">バトルを見る</span></h2>
+    <div class="movie-wrap rv">
+      <div class="movie-placeholder">
+        <span class="movie-play-icon">▶</span>
+        <p>大会ダイジェスト映像（準備中）</p>
+      </div>
+    </div>
+    <p class="movie-caption rv">2025年大会では、小学生から中学生まで多くのチームが「自分だけの提案」をぶつけ合いました。<br>3分間のプレゼンに込められた熱量と、審査員が本気でうなずく瞬間をご覧ください。</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  S2.75  プレゼンテーマ（独立セクション）
   ============================================================ -->
 <section class="sec theme-sec" id="theme">
   <div class="container">
@@ -885,7 +903,30 @@ import '../styles/global.css';
 .bene-price s{color:var(--c-text-muted);font-weight:400}
 
 
-/* ─────────── S2.5 THEME ─────────── */
+/* ─────────── S2.5 MOVIE ─────────── */
+.movie-wrap{max-width:720px;margin:0 auto 1.5rem}
+.movie-placeholder{
+  aspect-ratio:16/9;background:#1a1a2e;border-radius:var(--radius-md);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.8rem;color:rgba(255,255,255,.5);cursor:pointer;
+  transition:background .3s;
+}
+.movie-placeholder:hover{background:#2a2a3e}
+.movie-play-icon{
+  font-size:3rem;width:72px;height:72px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.12);border-radius:50%;
+  border:3px solid rgba(255,255,255,.25);
+  transition:transform .3s,background .3s;
+}
+.movie-placeholder:hover .movie-play-icon{transform:scale(1.1);background:rgba(245,166,35,.3)}
+.movie-placeholder p{font-family:var(--f-heading);font-size:.9rem;font-weight:700}
+.movie-caption{
+  text-align:center;font-size:.92rem;color:var(--c-text-light);
+  line-height:1.85;max-width:640px;margin:0 auto;
+}
+
+/* ─────────── S2.75 THEME ─────────── */
 .theme-sec{padding:clamp(2.5rem,6vw,4rem) 0}
 .theme-box{
   max-width:700px;margin:0 auto;text-align:center;
