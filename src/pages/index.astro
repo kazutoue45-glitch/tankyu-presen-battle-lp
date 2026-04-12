@@ -723,7 +723,7 @@ import '../styles/global.css';
 .hero{
   position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;
   text-align:center;overflow:hidden;
-  background:linear-gradient(135deg,#1a1040 0%,#0f2a5e 30%,#1a3a6e 50%,#2a1a50 70%,#1a1040 100%);
+  background:linear-gradient(135deg,#2d1b69 0%,#1a4080 25%,#2a5090 50%,#4a2d80 75%,#2d1b69 100%);
   color:#fff;
 }
 
@@ -752,23 +752,24 @@ import '../styles/global.css';
 }
 .beam--1{left:10%;border-top-color:var(--nordt-n);animation-delay:0s;animation-duration:7s;border-left-width:50px;border-right-width:50px}
 .beam--2{left:30%;border-top-color:var(--nordt-o);animation-delay:1.5s;animation-duration:9s;border-left-width:70px;border-right-width:70px}
-.beam--3{left:50%;transform:translateX(-50%);border-top-color:var(--nordt-d);animation-delay:.5s;animation-duration:8s;border-left-width:80px;border-right-width:80px;opacity:.08}
+.beam--3{left:50%;transform:translateX(-50%);border-top-color:var(--nordt-d);animation-delay:.5s;animation-duration:8s;border-left-width:80px;border-right-width:80px;opacity:.15}
 .beam--4{right:30%;border-top-color:var(--nordt-r);animation-delay:2s;animation-duration:10s;border-left-width:65px;border-right-width:65px}
 .beam--5{right:8%;border-top-color:var(--nordt-t);animation-delay:3s;animation-duration:7.5s;border-left-width:55px;border-right-width:55px}
 @keyframes beamSway{
-  0%,100%{transform:rotate(-3deg);opacity:.05}
-  50%{transform:rotate(3deg);opacity:.1}
+  0%,100%{transform:rotate(-3deg);opacity:.1}
+  50%{transform:rotate(3deg);opacity:.18}
 }
 
 /* スポットライトエフェクト — 強化版 */
 .hero-spotlight{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
-    radial-gradient(ellipse 50% 70% at 50% 20%, rgba(245,166,35,.2) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 60% at 25% 45%, rgba(155,81,224,.18) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 55% at 75% 50%, rgba(74,144,217,.16) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 50% at 50% 80%, rgba(76,175,80,.12) 0%, transparent 55%),
-    radial-gradient(ellipse 30% 40% at 85% 25%, rgba(208,72,62,.1) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 80% at 50% 20%, rgba(245,166,35,.35) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 65% at 20% 40%, rgba(155,81,224,.3) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 65% at 80% 45%, rgba(74,144,217,.28) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 55% at 50% 85%, rgba(76,175,80,.2) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 50% at 90% 20%, rgba(208,72,62,.18) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 70% at 50% 50%, rgba(255,255,255,.06) 0%, transparent 70%);
 }
 
 /* 光の粒子 */
@@ -797,13 +798,13 @@ import '../styles/global.css';
 /* レンズフレア */
 .hero-flare{position:absolute;border-radius:50%;pointer-events:none;z-index:4}
 .hero-flare--1{
-  width:280px;height:280px;top:5%;right:10%;
-  background:radial-gradient(circle,rgba(255,215,0,.25) 0%,rgba(245,166,35,.12) 40%,transparent 70%);
+  width:350px;height:350px;top:3%;right:8%;
+  background:radial-gradient(circle,rgba(255,215,0,.35) 0%,rgba(245,166,35,.15) 40%,transparent 70%);
   animation:flarePulse 4s ease-in-out infinite;
 }
 .hero-flare--2{
-  width:220px;height:220px;top:12%;left:8%;
-  background:radial-gradient(circle,rgba(155,81,224,.2) 0%,rgba(74,144,217,.1) 40%,transparent 70%);
+  width:300px;height:300px;top:10%;left:5%;
+  background:radial-gradient(circle,rgba(155,81,224,.28) 0%,rgba(74,144,217,.12) 40%,transparent 70%);
   animation:flarePulse 5s ease-in-out infinite 1.5s;
 }
 @keyframes flarePulse{
@@ -865,7 +866,7 @@ import '../styles/global.css';
 .hero-logo{
   display:block;width:100%;max-width:720px;
   margin:0 auto .8rem;
-  filter:drop-shadow(0 4px 24px rgba(0,0,0,.5)) drop-shadow(0 0 40px rgba(245,166,35,.2));
+  filter:drop-shadow(0 4px 24px rgba(0,0,0,.4)) drop-shadow(0 0 50px rgba(245,166,35,.35)) drop-shadow(0 0 80px rgba(155,81,224,.15));
   animation:logoDrop .8s .15s cubic-bezier(.22,1,.36,1) both;
 }
 @keyframes logoDrop{0%{opacity:0;transform:scale(.6) translateY(-50px) rotate(-2deg)}100%{opacity:1;transform:scale(1) translateY(0) rotate(0deg)}}
