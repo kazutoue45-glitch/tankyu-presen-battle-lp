@@ -22,7 +22,7 @@ import '../styles/global.css';
       <a href="#diagnosis">タイプ診断</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a href="#apply" class="header-cta">無料エントリー</a>
+    <a href="#" class="header-cta">資料ダウンロード</a>
     <button class="header-burger" id="header-burger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
     </button>
@@ -86,7 +86,7 @@ import '../styles/global.css';
   ============================================================ -->
 <section class="sec cta-sec">
   <div class="container" style="text-align:center">
-    <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
+    <a href="#" class="cta-btn">応募する</a>
     <p class="cta-note">※ 参加無料・1〜4名のチームでエントリーできます</p>
   </div>
 </section>
@@ -112,10 +112,9 @@ import '../styles/global.css';
         <p>NORDTの5つの評価軸とプレゼンタイプをまとめたA3見開きのプレゼンシートを、参加者全員にお届けします。自分の強みと伸ばすべきポイントがひと目でわかるから、次のプレゼンがもっと良くなります。</p>
       </article>
       <article class="bene rv rv-d3" style="--ac:var(--nordt-n)">
-        <div class="bene-badge" style="background:var(--nordt-n)">🎬</div>
-        <h3>プレゼンの映像授業<br>「プレゼンマスターズ」を特別価格で受講できる</h3>
-        <p>プロが教えるプレゼンの映像授業「プレゼンマスターズ」を、大会参加者限定の特別価格で受講できます。大会前の準備にも、大会後のさらなるスキルアップにも活用できます。</p>
-        <p class="bene-price">通常価格 <s>2,200円</s> → <strong>特別価格 1,000円</strong>（税込）</p>
+        <div class="bene-badge" style="background:var(--nordt-n)">🎭</div>
+        <h3>「あなたのプレゼンタイプ」が<br>わかる</h3>
+        <p>提出いただいたプレゼン動画を、小川探究のスタッフが全チーム審査します。各チームにエントリーNo.をつけ、自分のプレゼンタイプが後からわかる仕組みをご用意します。</p>
       </article>
     </div>
   </div>
@@ -149,9 +148,12 @@ import '../styles/global.css';
       <dl>
         <div class="info-row"><dt>⏱ 時間</dt><dd>3分のプレゼン</dd></div>
         <div class="info-row"><dt>💻 開催形式</dt><dd><strong>オンライン開催</strong></dd></div>
+        <div class="info-row"><dt>📅 エントリー開始</dt><dd><strong>6月1日</strong>より受付開始</dd></div>
         <div class="info-row"><dt>👥 審査員</dt><dd>教育者・ビジネスパーソンなどの大人が<strong>本気で聞く</strong></dd></div>
         <div class="info-row"><dt>🎓 対象</dt><dd>小学生〜高校生</dd></div>
+        <div class="info-row"><dt>🏅 審査区分</dt><dd><strong>「小学生の部」</strong>と<strong>「中学生・高校生の部」</strong>に分けて審査</dd></div>
         <div class="info-row"><dt>👥 チーム</dt><dd><strong>1〜4名</strong>のチームでエントリー</dd></div>
+        <div class="info-row"><dt>📝 応募方法</dt><dd><strong>団体応募</strong>・<strong>個人応募</strong>どちらでも可</dd></div>
         <div class="info-row"><dt>📋 定員</dt><dd><strong>1,000チーム</strong></dd></div>
         <div class="info-row"><dt>💰 参加費</dt><dd class="info-free">無料</dd></div>
       </dl>
@@ -192,16 +194,7 @@ import '../styles/global.css';
   <div class="container">
     <h2 class="sec-heading rv">昨年の<span class="pop">バトルを見る</span></h2>
     <div class="movie-wrap rv">
-      <div class="movie-video">
-        <iframe
-          src="https://www.youtube.com/embed/rSjYx4-JewY"
-          title="2025年大会ダイジェスト"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
+      <iframe class="movie-video" src="https://www.youtube.com/embed/rSjYx4-JewY" title="探究プレゼンバトル 2025 ダイジェスト" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p class="movie-caption rv">2025年大会では、小学生から高校生まで多くのチームが「自分だけの提案」をぶつけ合いました。<br>3分間のプレゼンに込められた熱量と、審査員が本気でうなずく瞬間をご覧ください。</p>
   </div>
@@ -538,7 +531,7 @@ import '../styles/global.css';
 
 <!-- CTA② -->
 <div class="cta-wrap rv">
-  <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
+  <a href="#" class="cta-btn">応募する</a>
   <p class="cta-note">※ オンライン開催。ご自宅から参加できます。</p>
 </div>
 
@@ -582,9 +575,9 @@ import '../styles/global.css';
       <div class="faq rv"><h3 class="faq-q">参加費はいくらですか？</h3><p>無料です。参加にかかる費用は一切ありません。</p></div>
       <div class="faq rv"><h3 class="faq-q">プレゼンの経験がなくても大丈夫ですか？</h3><p>大丈夫です。NORDT（5つの軸）で「考え」も「伝え方」も総合的に評価します。初めてでも安心して挑戦できます。</p></div>
       <div class="faq rv"><h3 class="faq-q">テーマは何ですか？</h3><p>「あなたの街の１０年後！―地域活性化を提案せよ―」です。このテーマに沿って準備を進めましょう。</p></div>
-      <div class="faq rv"><h3 class="faq-q">小学生の低学年でも参加できますか？</h3><p>小学生〜高校生が対象です。学年ではなく「課題を解決したい」という気持ちがあれば、どなたでも参加できます。</p></div>
+      <div class="faq rv"><h3 class="faq-q">小学生の低学年でも参加できますか？</h3><p>小学生〜高校生が対象です。「小学生の部」と「中学生・高校生の部」に分けて審査を行いますので、ご安心ください。学年ではなく「課題を解決したい」という気持ちがあれば、どなたでも参加できます。</p></div>
       <div class="faq rv"><h3 class="faq-q">当日は保護者の同席が必要ですか？</h3><p>オンライン開催のため、ご自宅から参加できます。保護者の方の同席は自由ですが、必須ではありません。</p></div>
-      <div class="faq rv"><h3 class="faq-q">プレゼンの準備は何をすればいいですか？</h3><p>テーマに対して「課題をどう解決するか」を考え、スライドを作って発表の準備をしましょう。スライドは必須です。有料ですが映像授業（特別価格1,000円、税込）もございます。</p></div>
+      <div class="faq rv"><h3 class="faq-q">プレゼンの準備は何をすればいいですか？</h3><p>テーマに対して「課題をどう解決するか」を考え、スライドを作って発表の準備をしましょう。スライドは必須です。有料ですがオンライン授業もご用意しております。</p></div>
       <div class="faq rv"><h3 class="faq-q">生成AI（ChatGPTなど）を使ってもいいですか？</h3><p>使ってOKです。ただし、AIの出力をそのまま使っても「いい提案」にはなりません。オリジナリティのないプレゼンはNORDTの評価で厳しくなるので、あくまで自分の考えをベースにしましょう。</p></div>
     </div>
   </div>
@@ -604,7 +597,7 @@ import '../styles/global.css';
     <div class="final-body rv">
       <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="final-logo" />
       <h2 class="final-catch">あなたの街の１０年後！<br>―地域活性化を提案せよ―</h2>
-      <a href="#" class="cta-btn cta-btn--lg">1分で完了！<br>無料でエントリーする</a>
+      <a href="#" class="cta-btn cta-btn--lg">応募する</a>
       <p class="cta-note">※ 参加無料。全員にプレゼンシートをお届けします。</p>
     </div>
   </div>
@@ -935,13 +928,9 @@ import '../styles/global.css';
 /* ─────────── S2.5 MOVIE ─────────── */
 .movie-wrap{max-width:720px;margin:0 auto 1.5rem}
 .movie-video{
-  position:relative;width:100%;aspect-ratio:16/9;
-  border-radius:var(--radius-md);overflow:hidden;
+  width:100%;aspect-ratio:16/9;border-radius:var(--radius-md);
   background:#1a1a2e;
   box-shadow:var(--shadow-lg);
-}
-.movie-video iframe{
-  position:absolute;inset:0;width:100%;height:100%;border:0;
 }
 .movie-caption{
   text-align:center;font-size:.92rem;color:var(--c-text-light);
