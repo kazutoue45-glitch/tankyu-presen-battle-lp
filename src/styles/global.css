@@ -118,7 +118,11 @@ a:hover {
 }
 
 .sec-heading .pop {
-  color: var(--c-accent)
+  background: linear-gradient(90deg, var(--nordt-n), var(--nordt-o), var(--nordt-r), var(--nordt-d), var(--nordt-t));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .sec-heading::before {
@@ -254,7 +258,7 @@ a:hover {
 
 /* ── Stripe divider ── */
 .stripe {
-  height: 8px;
+  height: 12px;
   background: linear-gradient(90deg,
     var(--nordt-n) 0% 20%,
     var(--nordt-o) 20% 40%,
