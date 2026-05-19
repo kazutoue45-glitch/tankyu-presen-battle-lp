@@ -29,3 +29,6 @@ upload_*.js
 
 # task files
 tasks/
+
+# Vercel
+.vercel
