@@ -305,3 +305,74 @@ a:hover {
     padding: 1.4rem 4.5rem;
   }
 }
+
+/* ── Diagnose CTA（外部診断ツール用） ── */
+.cta-btn--diagnose {
+  background: linear-gradient(135deg, #1e40af 0%, #6d28d9 100%);
+  box-shadow: 0 8px 28px rgba(30, 64, 175, .35), 0 0 0 3px rgba(255, 255, 255, .3);
+  animation: none;
+}
+.cta-btn--diagnose:hover {
+  box-shadow: 0 14px 40px rgba(109, 40, 217, .45);
+}
+.cta-btn-ext {
+  font-size: .85em;
+  margin-left: .1em;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+.cta-ext-note {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--c-text-muted);
+  margin: .8rem 0 0;
+  letter-spacing: .04em;
+}
+
+/* ── TikTok Follow Button ── */
+.tiktok-follow-wrap {
+  text-align: center;
+  padding: 1.8rem 1rem 0;
+}
+.tiktok-follow-lead {
+  font-size: .92rem;
+  color: var(--c-text-mid);
+  margin: 0 0 .9rem;
+  font-weight: 700;
+}
+.tiktok-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  background: #000;
+  color: #fff;
+  font-family: var(--f-heading);
+  font-size: 1.05rem;
+  font-weight: 900;
+  padding: .9rem 1.9rem;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  box-shadow:
+    -3px -3px 0 0 #25F4EE,
+    3px 3px 0 0 #FE2C55;
+  transition: transform .25s cubic-bezier(.22, 1, .36, 1), box-shadow .25s;
+  letter-spacing: .04em;
+}
+.tiktok-follow-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    -4px -4px 0 0 #25F4EE,
+    4px 4px 0 0 #FE2C55,
+    0 10px 25px rgba(0, 0, 0, .25);
+  color: #fff;
+}
+.tiktok-follow-icon {
+  display: inline-flex;
+  align-items: center;
+}
+.tiktok-follow-arrow {
+  font-size: .85em;
+  opacity: .85;
+  margin-left: .15em;
+}
