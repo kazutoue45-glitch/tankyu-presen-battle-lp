@@ -22,6 +22,7 @@ import '../styles/global.css';
       <a href="#diagnosis">タイプ診断</a>
       <a href="#faq">FAQ</a>
     </nav>
+    <a href="https://tankyu-presen-battle-form.vercel.app/manage/lookup" class="header-mypage" target="_blank" rel="noopener">マイページ</a>
     <a href="#" class="header-cta">資料ダウンロード</a>
     <button class="header-burger" id="header-burger" aria-label="メニューを開く">
       <span></span><span></span><span></span>
@@ -674,6 +675,19 @@ import '../styles/global.css';
   transition:transform .2s,box-shadow .2s;
 }
 .header-cta:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(245,166,35,.4);color:#fff}
+.header-mypage{
+  display:inline-flex;align-items:center;
+  font-family:var(--f-heading);font-size:.78rem;font-weight:700;
+  color:var(--c-text-mid);background:#fff;
+  border:1.5px solid var(--c-text-mid);
+  padding:.45rem 1rem;border-radius:100px;text-decoration:none;
+  white-space:nowrap;letter-spacing:.04em;
+  margin-right:.7rem;
+  transition:background-color .2s,color .2s,border-color .2s;
+}
+.header-mypage:hover{
+  background:var(--c-text);color:#fff;border-color:var(--c-text);
+}
 .header-burger{
   display:none;background:none;border:none;cursor:pointer;
   width:28px;height:20px;position:relative;padding:0;
@@ -706,6 +720,11 @@ import '../styles/global.css';
   }
   .header-nav a:hover{color:var(--c-orange)}
   .header-cta{display:none}
+  .header-mypage{
+    font-size:.72rem;
+    padding:.38rem .85rem;
+    margin-right:.45rem;
+  }
   .header-burger{display:block;z-index:101}
 }
 
