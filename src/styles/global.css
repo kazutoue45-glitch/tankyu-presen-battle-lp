@@ -332,12 +332,12 @@ a:hover {
 /* ── TikTok Follow Button ── */
 .tiktok-follow-wrap {
   text-align: center;
-  padding: 1.8rem 1rem 0;
+  padding: 2.4rem 1rem 3rem;
 }
 .tiktok-follow-lead {
   font-size: .92rem;
   color: var(--c-text-mid);
-  margin: 0 0 .9rem;
+  margin: 0 0 1.2rem;
   font-weight: 700;
 }
 .tiktok-follow-btn {
