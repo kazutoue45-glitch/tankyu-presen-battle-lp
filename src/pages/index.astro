@@ -59,13 +59,6 @@ import '../styles/global.css';
       あなたの街の１０年後！<br>―地域活性化を提案せよ―
     </h1>
 
-    <!-- 本大会の意義 -->
-    <div class="hero-mission">
-      <p class="hero-mission-title">正解を覚える時代から、問いを生み出す時代へ</p>
-      <p class="hero-mission-text">AIが答えを出してくれる時代だからこそ、人に求められるのは「何を問い、どう考えるか」です。探究学習は、自ら課題を見つけ、調べ、考え、発表する力を育てます。</p>
-      <p class="hero-mission-text">単に知識を覚えるだけでなく、子どもたちが自分の未来を切り拓く力を身につけるために、本大会を開催します。</p>
-    </div>
-
     <!-- 帯タグ -->
     <div class="hero-badges-wrap">
       <div class="hero-badges-row">
@@ -76,6 +69,14 @@ import '../styles/global.css';
         <span class="htag htag--blue" style="animation-delay:.8s">💻 オンライン開催</span>
         <span class="htag htag--orange" style="animation-delay:.95s">👥 1〜4名のチームでエントリー</span>
       </div>
+    </div>
+
+    <!-- 本大会の意義（メッセージカード） -->
+    <div class="hero-mission">
+      <span class="hero-mission-label">大会に込めた想い</span>
+      <p class="hero-mission-title">正解を覚える時代から、問いを生み出す時代へ</p>
+      <p class="hero-mission-text">AIが答えを出してくれる時代だからこそ、人に求められるのは「何を問い、どう考えるか」です。探究学習は、自ら課題を見つけ、調べ、考え、発表する力を育てます。</p>
+      <p class="hero-mission-text">単に知識を覚えるだけでなく、子どもたちが自分の未来を切り拓く力を身につけるために、本大会を開催します。</p>
     </div>
 
   </div>
@@ -832,7 +833,7 @@ import '../styles/global.css';
   font-family:var(--f-heading);
   font-size:clamp(1.4rem,4.2vw,2.6rem);font-weight:900;
   line-height:1.5;letter-spacing:.04em;text-align:center;
-  max-width:600px;
+  max-width:600px;width:calc(100% - 2.6rem);
   margin:0 auto clamp(1.5rem,4vw,2.5rem);
   padding:.8rem 1.5rem;
   background:linear-gradient(135deg,rgba(255,255,255,.85),rgba(255,249,240,.9));
@@ -853,20 +854,48 @@ import '../styles/global.css';
 }
 @keyframes slam{0%{opacity:0;transform:scale(1.3) translateY(-10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
 
-/* 本大会の意義 */
+/* 本大会の意義（メッセージカード） */
 .hero-mission{
-  max-width:32rem;margin:0 auto clamp(1.4rem,4vw,2.2rem);padding:0 1.6rem;text-align:center;
+  max-width:34rem;width:calc(100% - 2.6rem);
+  margin:clamp(1.6rem,5vw,2.6rem) auto 0;
+  padding:clamp(2rem,6vw,2.8rem) clamp(1.6rem,5.5vw,2.4rem) clamp(1.7rem,5vw,2.3rem);
+  text-align:center;position:relative;
+  background:linear-gradient(180deg,#fffdf8 0%,#fff6e6 100%);
+  border:1px solid #efe1c4;
+  border-radius:16px;
+  box-shadow:0 16px 36px rgba(150,116,52,.18),0 3px 8px rgba(150,116,52,.10);
   animation:fadeUp .6s .45s both;
 }
+.hero-mission::before{
+  content:'✉';
+  position:absolute;top:-19px;left:50%;transform:translateX(-50%);z-index:2;
+  width:42px;height:42px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#ff8060,#dd482e);
+  color:#fff;font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 9px rgba(190,60,30,.32);
+}
+.hero-mission::after{
+  content:'';position:absolute;inset:13px;z-index:0;
+  border:1px dashed rgba(193,150,78,.30);border-radius:11px;pointer-events:none;
+}
+.hero-mission-label{
+  display:inline-block;position:relative;z-index:1;
+  font-family:var(--f-heading);font-size:.72rem;font-weight:700;letter-spacing:.14em;
+  color:var(--c-orange);margin:0 0 .8rem;
+}
 .hero-mission-title{
+  position:relative;z-index:1;
   font-family:var(--f-heading);font-weight:800;
   font-size:clamp(1.05rem,3.7vw,1.4rem);line-height:1.55;
-  color:var(--c-text);margin:0 0 .7rem;
+  color:var(--c-text);margin:0 0 .8rem;
 }
 .hero-mission-text{
+  position:relative;z-index:1;
   font-size:clamp(.82rem,2.6vw,.95rem);line-height:1.9;
   color:var(--c-text-light);margin:0 0 .55rem;
 }
+.hero-mission-text:last-child{margin-bottom:0}
 
 .hero-badges-wrap{
   display:flex;flex-direction:column;align-items:center;gap:.4rem;
@@ -948,6 +977,7 @@ import '../styles/global.css';
 
 /* ─── モバイル調整 ─── */
 @media(max-width:600px){
+  .hero{padding-bottom:130px}
   .hero-orca{width:60px;bottom:50px;right:10px}
   .hero-bg-img{object-position:center 55%}
 }
@@ -1525,12 +1555,12 @@ details.faq[open]>p{animation:faqOpen .25s ease}
   .header-nav a{font-size:.88rem}
   .header-cta{font-size:.85rem;padding:.55rem 1.6rem}
 
-  /* Hero — 意義文ごとFV1画面に収める（縦圧縮）。スマホは全文表示のまま */
-  .hero-logo{max-width:480px;margin-bottom:.5rem}
-  .hero-mission{max-width:48rem;margin:0 auto 1.1rem}
-  .hero-mission-title{font-size:1.32rem;margin-bottom:.5rem}
-  .hero-mission-text{font-size:.9rem;line-height:1.7;margin-bottom:.35rem}
-  .hero-theme{max-width:660px;margin-top:0;margin-bottom:1.3rem;padding:.7rem 1.5rem}
+  /* Hero — PCはロゴ/テーマ/タグを上部に、意義カードはその下 */
+  .hero-logo{max-width:560px;margin-bottom:.6rem}
+  .hero-mission{max-width:38rem;margin-top:1.4rem}
+  .hero-mission-title{font-size:1.34rem;margin-bottom:.8rem}
+  .hero-mission-text{font-size:.92rem;line-height:1.85}
+  .hero-theme{max-width:620px;margin-bottom:1.3rem;padding:.7rem 1.5rem}
   .htag{font-size:.85rem;padding:.35rem .9rem}
   .hero-badges-row{gap:.8rem}
   .hero-orca{width:clamp(100px,12vw,150px);bottom:80px}
