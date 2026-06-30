@@ -54,17 +54,17 @@ import '../styles/global.css';
     <!-- 大会ロゴ -->
     <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="hero-logo" />
 
+    <!-- プレゼンテーマ -->
+    <h1 class="hero-theme">
+      あなたの街の１０年後！<br>―地域活性化を提案せよ―
+    </h1>
+
     <!-- 本大会の意義 -->
     <div class="hero-mission">
       <p class="hero-mission-title">正解を覚える時代から、問いを生み出す時代へ</p>
       <p class="hero-mission-text">AIが答えを出してくれる時代だからこそ、人に求められるのは「何を問い、どう考えるか」です。探究学習は、自ら課題を見つけ、調べ、考え、発表する力を育てます。</p>
       <p class="hero-mission-text">単に知識を覚えるだけでなく、子どもたちが自分の未来を切り拓く力を身につけるために、本大会を開催します。</p>
     </div>
-
-    <!-- プレゼンテーマ -->
-    <h1 class="hero-theme">
-      あなたの街の１０年後！<br>―地域活性化を提案せよ―
-    </h1>
 
     <!-- 帯タグ -->
     <div class="hero-badges-wrap">
@@ -855,7 +855,7 @@ import '../styles/global.css';
 
 /* 本大会の意義 */
 .hero-mission{
-  max-width:32rem;margin:0 auto clamp(1.4rem,4vw,2.2rem);text-align:center;
+  max-width:32rem;margin:0 auto clamp(1.4rem,4vw,2.2rem);padding:0 1.6rem;text-align:center;
   animation:fadeUp .6s .45s both;
 }
 .hero-mission-title{
