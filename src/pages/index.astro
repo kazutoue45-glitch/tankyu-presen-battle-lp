@@ -54,6 +54,11 @@ import '../styles/global.css';
     <!-- 大会ロゴ -->
     <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="hero-logo" />
 
+    <div class="hero-deadline-notice">
+      <strong>動画提出の締切は9/1（火）です！</strong>
+      <span>まだのチームは早めにエントリーしてください！</span>
+    </div>
+
     <!-- プレゼンテーマ -->
     <h1 class="hero-theme">
       あなたの街の１０年後！<br>―地域活性化を提案せよ―
@@ -853,6 +858,24 @@ import '../styles/global.css';
   letter-spacing:.06em;
 }
 @keyframes slam{0%{opacity:0;transform:scale(1.3) translateY(-10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
+
+/* 動画提出期限のお知らせ */
+.hero-deadline-notice{
+  display:flex;flex-direction:column;align-items:center;gap:.2rem;
+  max-width:620px;width:calc(100% - 2.6rem);
+  margin:0 auto clamp(1rem,3vw,1.5rem);
+  padding:.7rem 1.2rem;
+  color:#8a321f;background:linear-gradient(135deg,#fff4c9,#ffe2b8);
+  border:2px solid var(--c-orange);border-radius:var(--radius-md);
+  box-shadow:0 5px 18px rgba(221,72,46,.14);
+  animation:fadeUp .5s .55s both;
+}
+.hero-deadline-notice strong{
+  font-family:var(--f-heading);font-size:clamp(.95rem,2.8vw,1.2rem);line-height:1.45;
+}
+.hero-deadline-notice span{
+  font-size:clamp(.78rem,2.2vw,.95rem);font-weight:700;line-height:1.5;
+}
 
 /* 本大会の意義（メッセージカード） */
 .hero-mission{
